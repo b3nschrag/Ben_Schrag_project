@@ -1,0 +1,830 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "0",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0001",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 6353.158446235238,
+        "soil_name": "Galva",
+        "soil_pct": 95,
+        "drainage_class": "Well drained",
+        "organic_matter": 4.0,
+        "ph": 5.7,
+        "clay_pct": 32.0,
+        "sand_pct": 4.0,
+        "silt_pct": 64.0,
+        "water_capacity": 0.22,
+        "cec": 25.2,
+        "bulk_density": 1.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-96.17366932034082, 42.77124070215894],
+            [-96.15763488233591, 42.77124070215894],
+            [-96.15763488233591, 42.78727514016385],
+            [-96.17366932034082, 42.78727514016385],
+            [-96.17366932034082, 42.77124070215894]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0002",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 229.19273128977736,
+        "soil_name": "Clime",
+        "soil_pct": 60,
+        "drainage_class": "Well drained",
+        "organic_matter": 3.0,
+        "ph": 7.5,
+        "clay_pct": 41.0,
+        "sand_pct": 5.0,
+        "silt_pct": 54.0,
+        "water_capacity": 0.16,
+        "cec": 22.1,
+        "bulk_density": 1.32
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-96.4415775491475, 38.9345890901451],
+            [-96.43853204412846, 38.9345890901451],
+            [-96.43853204412846, 38.937634595164134],
+            [-96.4415775491475, 38.937634595164134],
+            [-96.4415775491475, 38.9345890901451]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0003",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 138.85763923346028,
+        "soil_name": "Muscatine",
+        "soil_pct": 95,
+        "drainage_class": "Somewhat poorly drained",
+        "organic_matter": 5.0,
+        "ph": 5.6,
+        "clay_pct": 30.0,
+        "sand_pct": 3.0,
+        "silt_pct": 67.0,
+        "water_capacity": 0.23,
+        "cec": 25.5,
+        "bulk_density": 1.32
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-90.92045948248821, 41.605504810010586],
+            [-90.91808896159088, 41.605504810010586],
+            [-90.91808896159088, 41.607875330907916],
+            [-90.92045948248821, 41.607875330907916],
+            [-90.92045948248821, 41.605504810010586]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0004",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 100.23255562853421,
+        "soil_name": "Warsaw",
+        "soil_pct": 90,
+        "drainage_class": "Well drained",
+        "organic_matter": 4.0,
+        "ph": 6.8,
+        "clay_pct": 20.0,
+        "sand_pct": 36.0,
+        "silt_pct": 44.0,
+        "water_capacity": 0.22,
+        "cec": 17.5,
+        "bulk_density": 1.38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-88.61547991873508, 42.330985624708376],
+            [-88.61346590094993, 42.330985624708376],
+            [-88.61346590094993, 42.33299964249352],
+            [-88.61547991873508, 42.33299964249352],
+            [-88.61547991873508, 42.330985624708376]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0005",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 111.81400231574848,
+        "soil_name": "Ladoga",
+        "soil_pct": 95,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 3.0,
+        "ph": 6.6,
+        "clay_pct": 25.0,
+        "sand_pct": 2.0,
+        "silt_pct": 73.0,
+        "water_capacity": 0.2,
+        "cec": 20.8,
+        "bulk_density": 1.33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-91.88453199186416, 41.70382546101932],
+            [-91.88240479837022, 41.70382546101932],
+            [-91.88240479837022, 41.70595265451328],
+            [-91.88453199186416, 41.70595265451328],
+            [-91.88453199186416, 41.70382546101932]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0006",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 502.81309149614566,
+        "soil_name": "Leonard",
+        "soil_pct": 85,
+        "drainage_class": "Poorly drained",
+        "organic_matter": 2.7,
+        "ph": 6.6,
+        "clay_pct": 25.0,
+        "sand_pct": 5.0,
+        "silt_pct": 70.0,
+        "water_capacity": 0.21,
+        "cec": 20.7,
+        "bulk_density": 1.38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-91.88372649752208, 39.745119396442384],
+            [-91.87921560803034, 39.745119396442384],
+            [-91.87921560803034, 39.749630285934124],
+            [-91.88372649752208, 39.749630285934124],
+            [-91.88372649752208, 39.745119396442384]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0007",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 773.298222383251,
+        "soil_name": "Elco",
+        "soil_pct": 95,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 1.5,
+        "ph": 6.6,
+        "clay_pct": 23.0,
+        "sand_pct": 4.0,
+        "silt_pct": 73.0,
+        "water_capacity": 0.19,
+        "cec": 19.5,
+        "bulk_density": 1.42
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-90.15103745010929, 40.733622841262786],
+            [-90.14544332203043, 40.733622841262786],
+            [-90.14544332203043, 40.73921696934164],
+            [-90.15103745010929, 40.73921696934164],
+            [-90.15103745010929, 40.733622841262786]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0008",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 7549.388132397261,
+        "soil_name": "Anthroportic Udorthents",
+        "soil_pct": 100,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 1.0,
+        "ph": 6.3,
+        "clay_pct": 25.0,
+        "sand_pct": 35.0,
+        "silt_pct": 40.0,
+        "water_capacity": 0.2,
+        "cec": 16.6,
+        "bulk_density": 1.4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.34111053118083, 43.8906458511801],
+            [-93.32363160385957, 43.8906458511801],
+            [-93.32363160385957, 43.90812477850135],
+            [-93.34111053118083, 43.90812477850135],
+            [-93.34111053118083, 43.8906458511801]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0009",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 8995.725513153173,
+        "soil_name": "Irwin",
+        "soil_pct": 90,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 3.0,
+        "ph": 6.5,
+        "clay_pct": 33.0,
+        "sand_pct": 8.0,
+        "silt_pct": 59.0,
+        "water_capacity": 0.21,
+        "cec": 27.2,
+        "bulk_density": 1.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.35902403998247, 39.01360477228847],
+            [-97.33994410031193, 39.01360477228847],
+            [-97.33994410031193, 39.03268471195903],
+            [-97.35902403998247, 39.03268471195903],
+            [-97.35902403998247, 39.01360477228847]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0010",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 348.99436528796065,
+        "soil_name": "Storden",
+        "soil_pct": 86,
+        "drainage_class": "Well drained",
+        "organic_matter": 2.5,
+        "ph": 7.7,
+        "clay_pct": 21.0,
+        "sand_pct": 46.0,
+        "silt_pct": 33.0,
+        "water_capacity": 0.18,
+        "cec": 16.0,
+        "bulk_density": 1.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-94.95574135729235, 42.84850503967271],
+            [-94.95198325924024, 42.84850503967271],
+            [-94.95198325924024, 42.852263137724826],
+            [-94.95574135729235, 42.852263137724826],
+            [-94.95574135729235, 42.84850503967271]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0011",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 7139.252306461458,
+        "soil_name": "Burkhardt",
+        "soil_pct": 100,
+        "drainage_class": "Somewhat excessively drained",
+        "organic_matter": 2.0,
+        "ph": 5.8,
+        "clay_pct": 9.0,
+        "sand_pct": 67.4,
+        "silt_pct": 23.6,
+        "water_capacity": 0.13,
+        "cec": 17.5,
+        "bulk_density": 1.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-91.90853217637942, 42.09108235874712],
+            [-91.89153466796816, 42.09108235874712],
+            [-91.89153466796816, 42.108079867158374],
+            [-91.90853217637942, 42.108079867158374],
+            [-91.90853217637942, 42.09108235874712]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0012",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 4791.788363995388,
+        "soil_name": "Kamrar",
+        "soil_pct": 90,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 3.5,
+        "ph": 5.8,
+        "clay_pct": 37.0,
+        "sand_pct": 25.0,
+        "silt_pct": 38.0,
+        "water_capacity": 0.18,
+        "cec": 29.3,
+        "bulk_density": 1.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-95.41916288455901, 43.44895971191351],
+            [-95.40523748344064, 43.44895971191351],
+            [-95.40523748344064, 43.46288511303188],
+            [-95.41916288455901, 43.46288511303188],
+            [-95.41916288455901, 43.44895971191351]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0013",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 3689.1432185535864,
+        "soil_name": "Judson",
+        "soil_pct": 92,
+        "drainage_class": "Well drained",
+        "organic_matter": 3.5,
+        "ph": 6.5,
+        "clay_pct": 26.0,
+        "sand_pct": 4.0,
+        "silt_pct": 70.0,
+        "water_capacity": 0.17,
+        "cec": 22.1,
+        "bulk_density": 1.33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-95.9266926742685, 40.54482594399709],
+            [-95.91447406836774, 40.54482594399709],
+            [-95.91447406836774, 40.557044549897846],
+            [-95.9266926742685, 40.557044549897846],
+            [-95.9266926742685, 40.54482594399709]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0014",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 8837.111104774,
+        "soil_name": "Urne",
+        "soil_pct": 95,
+        "drainage_class": "Well drained",
+        "organic_matter": 1.5,
+        "ph": 6.2,
+        "clay_pct": 14.0,
+        "sand_pct": 66.1,
+        "silt_pct": 19.9,
+        "water_capacity": 0.17,
+        "cec": 7.6,
+        "bulk_density": 1.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-90.25812725686293, 43.80805227611328],
+            [-90.23921627591477, 43.80805227611328],
+            [-90.23921627591477, 43.82696325706143],
+            [-90.25812725686293, 43.82696325706143],
+            [-90.25812725686293, 43.80805227611328]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0015",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 1533.5036281089058,
+        "soil_name": "Seaton",
+        "soil_pct": 97,
+        "drainage_class": "Well drained",
+        "organic_matter": 2.0,
+        "ph": 6.2,
+        "clay_pct": 17.0,
+        "sand_pct": 6.0,
+        "silt_pct": 77.0,
+        "water_capacity": 0.23,
+        "cec": 14.7,
+        "bulk_density": 1.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-90.73121890835505, 43.55601432784351],
+            [-90.72334117451653, 43.55601432784351],
+            [-90.72334117451653, 43.56389206168201],
+            [-90.73121890835505, 43.56389206168201],
+            [-90.73121890835505, 43.55601432784351]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0016",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 1525.0327666674953,
+        "soil_name": "Hord",
+        "soil_pct": 90,
+        "drainage_class": "Well drained",
+        "organic_matter": 2.0,
+        "ph": 6.5,
+        "clay_pct": 22.0,
+        "sand_pct": 11.0,
+        "silt_pct": 67.0,
+        "water_capacity": 0.21,
+        "cec": 18.6,
+        "bulk_density": 1.42
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.55165508387148, 39.171969201538005],
+            [-97.54379913791774, 39.171969201538005],
+            [-97.54379913791774, 39.17982514749174],
+            [-97.55165508387148, 39.17982514749174],
+            [-97.55165508387148, 39.171969201538005]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0017",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 1752.537352372446,
+        "soil_name": "Buckhart",
+        "soil_pct": 93,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 3.5,
+        "ph": 6.6,
+        "clay_pct": 24.0,
+        "sand_pct": 4.0,
+        "silt_pct": 72.0,
+        "water_capacity": 0.23,
+        "cec": 20.5,
+        "bulk_density": 1.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-89.71683568842094, 39.62388341070313],
+            [-89.70841412854047, 39.62388341070313],
+            [-89.70841412854047, 39.63230497058362],
+            [-89.71683568842094, 39.63230497058362],
+            [-89.71683568842094, 39.62388341070313]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0018",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 275.9765066550996,
+        "soil_name": "Winfield",
+        "soil_pct": 95,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 2.5,
+        "ph": 5.6,
+        "clay_pct": 14.3,
+        "sand_pct": 3.0,
+        "silt_pct": 82.7,
+        "water_capacity": 0.2,
+        "cec": 12.7,
+        "bulk_density": 1.38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-89.97970114825272, 38.84387439405546],
+            [-89.97635923666648, 38.84387439405546],
+            [-89.97635923666648, 38.847216305641695],
+            [-89.97970114825272, 38.847216305641695],
+            [-89.97970114825272, 38.84387439405546]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0019",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 1310.6219432414925,
+        "soil_name": "Gara",
+        "soil_pct": 92,
+        "drainage_class": "Well drained",
+        "organic_matter": 2.23,
+        "ph": 6.8,
+        "clay_pct": 18.0,
+        "sand_pct": 50.0,
+        "silt_pct": 32.0,
+        "water_capacity": 0.2,
+        "cec": 27.5,
+        "bulk_density": 1.47
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-94.05482621181677, 40.53676749066575],
+            [-94.04754342467184, 40.53676749066575],
+            [-94.04754342467184, 40.54405027781068],
+            [-94.05482621181677, 40.54405027781068],
+            [-94.05482621181677, 40.53676749066575]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0020",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 5650.775837198638,
+        "soil_name": "Beavercreek",
+        "soil_pct": 96,
+        "drainage_class": "Well drained",
+        "organic_matter": 1.5,
+        "ph": 6.7,
+        "clay_pct": 11.5,
+        "sand_pct": 62.5,
+        "silt_pct": 26.0,
+        "water_capacity": 0.15,
+        "cec": 6.2,
+        "bulk_density": 1.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-90.93898762603621, 42.88520750621664],
+            [-90.92386549701146, 42.88520750621664],
+            [-90.92386549701146, 42.90032963524137],
+            [-90.93898762603621, 42.90032963524137],
+            [-90.93898762603621, 42.88520750621664]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0021",
+        "region": "great_plains",
+        "crop_name": "corn",
+        "area_acres": 4651.056129711819,
+        "soil_name": "Catlin",
+        "soil_pct": 99,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 3.5,
+        "ph": 7.0,
+        "clay_pct": 26.0,
+        "sand_pct": 4.0,
+        "silt_pct": 70.0,
+        "water_capacity": 0.22,
+        "cec": 22.1,
+        "bulk_density": 1.35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-88.74385090809602, 41.628900155456556],
+            [-88.73013152163699, 41.628900155456556],
+            [-88.73013152163699, 41.642619541915586],
+            [-88.74385090809602, 41.642619541915586],
+            [-88.74385090809602, 41.628900155456556]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0022",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 341.4731863291507,
+        "soil_name": "Dickman",
+        "soil_pct": 95,
+        "drainage_class": "Well drained",
+        "organic_matter": 1.5,
+        "ph": 6.1,
+        "clay_pct": 12.0,
+        "sand_pct": 68.3,
+        "silt_pct": 19.7,
+        "water_capacity": 0.14,
+        "cec": 10.0,
+        "bulk_density": 1.35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.50735194966637, 43.098372775690386],
+            [-93.50363456756955, 43.098372775690386],
+            [-93.50363456756955, 43.10209015778721],
+            [-93.50735194966637, 43.10209015778721],
+            [-93.50735194966637, 43.098372775690386]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0023",
+        "region": "great_plains",
+        "crop_name": "wheat",
+        "area_acres": 5658.836796510435,
+        "soil_name": "Knox",
+        "soil_pct": 100,
+        "drainage_class": "Well drained",
+        "organic_matter": 2.0,
+        "ph": 6.5,
+        "clay_pct": 22.5,
+        "sand_pct": 4.0,
+        "silt_pct": 73.5,
+        "water_capacity": 0.23,
+        "cec": 14.0,
+        "bulk_density": 1.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-94.75573323533757, 39.85832747468893],
+            [-94.74060032412748, 39.85832747468893],
+            [-94.74060032412748, 39.873460385899016],
+            [-94.75573323533757, 39.873460385899016],
+            [-94.75573323533757, 39.85832747468893]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "23",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0024",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 426.13045068964794,
+        "soil_name": "Moland",
+        "soil_pct": 95,
+        "drainage_class": "Well drained",
+        "organic_matter": 3.5,
+        "ph": 6.5,
+        "clay_pct": 22.5,
+        "sand_pct": 28.0,
+        "silt_pct": 49.5,
+        "water_capacity": 0.23,
+        "cec": 19.4,
+        "bulk_density": 1.38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.27992709659395, 43.321200107244515],
+            [-93.27577440016705, 43.321200107244515],
+            [-93.27577440016705, 43.3253528036714],
+            [-93.27992709659395, 43.3253528036714],
+            [-93.27992709659395, 43.321200107244515]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "type": "Feature",
+      "properties": {
+        "field_id": "FIELD_0025",
+        "region": "great_plains",
+        "crop_name": "soybeans",
+        "area_acres": 964.5539104162021,
+        "soil_name": "Chaseburg",
+        "soil_pct": 90,
+        "drainage_class": "Moderately well drained",
+        "organic_matter": 2.5,
+        "ph": 7.0,
+        "clay_pct": 14.0,
+        "sand_pct": 14.2,
+        "silt_pct": 71.8,
+        "water_capacity": 0.23,
+        "cec": 12.5,
+        "bulk_density": 1.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-90.78582865262901, 43.090359081318766],
+            [-90.77958092407353, 43.090359081318766],
+            [-90.77958092407353, 43.096606809874245],
+            [-90.78582865262901, 43.096606809874245],
+            [-90.78582865262901, 43.090359081318766]
+          ]
+        ]
+      }
+    }
+  ]
+}
