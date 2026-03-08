@@ -1,125 +1,1681 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>My Fields - Crop Map</title>
+  <head>
+    <title>My Fields - Crop & Soil Map</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-        #container { display: flex; height: 100vh; }
-        #sidebar {
-            width: 300px;
-            background: #ffffff;
-            border-right: 1px solid #ddd;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        #sidebar h1 {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            color: #1B5E20;
-        }
-        .panel {
-            margin: 20px 0;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        .panel h3 {
-            font-size: 0.85em;
-            color: #666;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            margin: 8px 0;
-            font-size: 0.9em;
-        }
-        .legend-color {
-            width: 24px;
-            height: 16px;
-            border-radius: 3px;
-            margin-right: 10px;
-            border: 1px solid #333;
-        }
-        #map { flex: 1; }
-        .field-popup {
-            font-size: 0.9em;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      #container {
+        display: flex;
+        height: 100vh;
+      }
+      #sidebar {
+        width: 300px;
+        background: #ffffff;
+        border-right: 1px solid #ddd;
+        padding: 20px;
+        overflow-y: auto;
+      }
+      #sidebar h1 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        color: #1b5e20;
+      }
+      .panel {
+        margin: 20px 0;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+      .panel h3 {
+        font-size: 0.85em;
+        color: #666;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        font-size: 0.9em;
+      }
+      .legend-color {
+        width: 24px;
+        height: 16px;
+        border-radius: 3px;
+        margin-right: 10px;
+        border: 1px solid #333;
+      }
+      #map {
+        flex: 1;
+      }
+      .field-popup {
+        font-size: 0.9em;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div id="sidebar">
-            <h1>🌾 My Fields Map</h1>
-            
-            <div class="panel">
-                <h3>Crops (2023)</h3>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #2E7D32;"></div>
-                    <span>Corn</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #F9A825;"></div>
-                    <span>Soybeans</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #E65100;"></div>
-                    <span>Winter Wheat</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #9E9E9E;"></div>
-                    <span>Fallow/Idle</span>
-                </div>
-            </div>
-            
-            <div class="panel">
-                <h3>Summary</h3>
-                <p><strong>Total Fields:</strong> 25</p>
-                <p><strong>Total Area:</strong> 73651.3 acres</p>
-            </div>
+      <div id="sidebar">
+        <h1>🌾 My Fields Map</h1>
+
+        <div class="panel">
+          <h3>Crops (2023)</h3>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #ffd700"></div>
+            <span>Corn</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #228b22"></div>
+            <span>Soybeans</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #ff8c00"></div>
+            <span>Winter Wheat</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #9e9e9e"></div>
+            <span>Fallow/Idle</span>
+          </div>
         </div>
 
-        <div id="map"></div>
+        <div class="panel">
+          <h3>Soils</h3>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #8d6e63"></div>
+            <span>OM &lt; 2%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #a1887f"></div>
+            <span>OM 2-3%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #bcaaa4"></div>
+            <span>OM 3-4%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #d7ccc8"></div>
+            <span>OM &gt; 4%</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Summary</h3>
+          <p><strong>Total Fields:</strong> 25</p>
+          <p><strong>Total Area:</strong> 73651.3 acres</p>
+          <p><strong>Avg Organic Matter:</strong> 2.7%</p>
+          <p><strong>Avg pH:</strong> 6.4</p>
+        </div>
+      </div>
+
+      <div id="map"></div>
     </div>
 
     <script>
-        var map = L.map('map').setView([41.37599958627841, -93.0825604924107], 7);
+      var map = L.map('map').setView([41.37599958627841, -93.0825604924107], 7);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap'
-        }).addTo(map);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap',
+      }).addTo(map);
 
-        var fieldData = {"type": "FeatureCollection", "features": [{"id": "0", "type": "Feature", "properties": {"field_id": "FIELD_0001", "region": "great_plains", "area_acres": 6353.158446235238, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 93.5}, "geometry": {"type": "Polygon", "coordinates": [[[-96.17366932034082, 42.77124070215894], [-96.15763488233591, 42.77124070215894], [-96.15763488233591, 42.78727514016385], [-96.17366932034082, 42.78727514016385], [-96.17366932034082, 42.77124070215894]]]}}, {"id": "1", "type": "Feature", "properties": {"field_id": "FIELD_0002", "region": "great_plains", "area_acres": 229.19273128977736, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 90.2}, "geometry": {"type": "Polygon", "coordinates": [[[-96.4415775491475, 38.9345890901451], [-96.43853204412846, 38.9345890901451], [-96.43853204412846, 38.937634595164134], [-96.4415775491475, 38.937634595164134], [-96.4415775491475, 38.9345890901451]]]}}, {"id": "2", "type": "Feature", "properties": {"field_id": "FIELD_0003", "region": "great_plains", "area_acres": 138.85763923346028, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 97.3}, "geometry": {"type": "Polygon", "coordinates": [[[-90.92045948248821, 41.605504810010586], [-90.91808896159088, 41.605504810010586], [-90.91808896159088, 41.607875330907916], [-90.92045948248821, 41.607875330907916], [-90.92045948248821, 41.605504810010586]]]}}, {"id": "3", "type": "Feature", "properties": {"field_id": "FIELD_0004", "region": "great_plains", "area_acres": 100.23255562853421, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 90.1}, "geometry": {"type": "Polygon", "coordinates": [[[-88.61547991873508, 42.330985624708376], [-88.61346590094993, 42.330985624708376], [-88.61346590094993, 42.33299964249352], [-88.61547991873508, 42.33299964249352], [-88.61547991873508, 42.330985624708376]]]}}, {"id": "4", "type": "Feature", "properties": {"field_id": "FIELD_0005", "region": "great_plains", "area_acres": 111.81400231574848, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 89.2}, "geometry": {"type": "Polygon", "coordinates": [[[-91.88453199186416, 41.70382546101932], [-91.88240479837022, 41.70382546101932], [-91.88240479837022, 41.70595265451328], [-91.88453199186416, 41.70595265451328], [-91.88453199186416, 41.70382546101932]]]}}, {"id": "5", "type": "Feature", "properties": {"field_id": "FIELD_0006", "region": "great_plains", "area_acres": 502.81309149614566, "crop_code": 5, "crop_name": "Soybeans", "dominant_pct": 87.1}, "geometry": {"type": "Polygon", "coordinates": [[[-91.88372649752208, 39.745119396442384], [-91.87921560803034, 39.745119396442384], [-91.87921560803034, 39.749630285934124], [-91.88372649752208, 39.749630285934124], [-91.88372649752208, 39.745119396442384]]]}}, {"id": "6", "type": "Feature", "properties": {"field_id": "FIELD_0007", "region": "great_plains", "area_acres": 773.298222383251, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 89.7}, "geometry": {"type": "Polygon", "coordinates": [[[-90.15103745010929, 40.733622841262786], [-90.14544332203043, 40.733622841262786], [-90.14544332203043, 40.73921696934164], [-90.15103745010929, 40.73921696934164], [-90.15103745010929, 40.733622841262786]]]}}, {"id": "7", "type": "Feature", "properties": {"field_id": "FIELD_0008", "region": "great_plains", "area_acres": 7549.388132397261, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 91.1}, "geometry": {"type": "Polygon", "coordinates": [[[-93.34111053118083, 43.8906458511801], [-93.32363160385957, 43.8906458511801], [-93.32363160385957, 43.90812477850135], [-93.34111053118083, 43.90812477850135], [-93.34111053118083, 43.8906458511801]]]}}, {"id": "8", "type": "Feature", "properties": {"field_id": "FIELD_0009", "region": "great_plains", "area_acres": 8995.725513153173, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 87.6}, "geometry": {"type": "Polygon", "coordinates": [[[-97.35902403998247, 39.01360477228847], [-97.33994410031193, 39.01360477228847], [-97.33994410031193, 39.03268471195903], [-97.35902403998247, 39.03268471195903], [-97.35902403998247, 39.01360477228847]]]}}, {"id": "9", "type": "Feature", "properties": {"field_id": "FIELD_0010", "region": "great_plains", "area_acres": 348.99436528796065, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 88.8}, "geometry": {"type": "Polygon", "coordinates": [[[-94.95574135729235, 42.84850503967271], [-94.95198325924024, 42.84850503967271], [-94.95198325924024, 42.852263137724826], [-94.95574135729235, 42.852263137724826], [-94.95574135729235, 42.84850503967271]]]}}, {"id": "10", "type": "Feature", "properties": {"field_id": "FIELD_0011", "region": "great_plains", "area_acres": 7139.252306461458, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 96.8}, "geometry": {"type": "Polygon", "coordinates": [[[-91.90853217637942, 42.09108235874712], [-91.89153466796816, 42.09108235874712], [-91.89153466796816, 42.108079867158374], [-91.90853217637942, 42.108079867158374], [-91.90853217637942, 42.09108235874712]]]}}, {"id": "11", "type": "Feature", "properties": {"field_id": "FIELD_0012", "region": "great_plains", "area_acres": 4791.788363995388, "crop_code": 5, "crop_name": "Soybeans", "dominant_pct": 88.2}, "geometry": {"type": "Polygon", "coordinates": [[[-95.41916288455901, 43.44895971191351], [-95.40523748344064, 43.44895971191351], [-95.40523748344064, 43.46288511303188], [-95.41916288455901, 43.46288511303188], [-95.41916288455901, 43.44895971191351]]]}}, {"id": "12", "type": "Feature", "properties": {"field_id": "FIELD_0013", "region": "great_plains", "area_acres": 3689.1432185535864, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 88.7}, "geometry": {"type": "Polygon", "coordinates": [[[-95.9266926742685, 40.54482594399709], [-95.91447406836774, 40.54482594399709], [-95.91447406836774, 40.557044549897846], [-95.9266926742685, 40.557044549897846], [-95.9266926742685, 40.54482594399709]]]}}, {"id": "13", "type": "Feature", "properties": {"field_id": "FIELD_0014", "region": "great_plains", "area_acres": 8837.111104774, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 92.2}, "geometry": {"type": "Polygon", "coordinates": [[[-90.25812725686293, 43.80805227611328], [-90.23921627591477, 43.80805227611328], [-90.23921627591477, 43.82696325706143], [-90.25812725686293, 43.82696325706143], [-90.25812725686293, 43.80805227611328]]]}}, {"id": "14", "type": "Feature", "properties": {"field_id": "FIELD_0015", "region": "great_plains", "area_acres": 1533.5036281089058, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 87.0}, "geometry": {"type": "Polygon", "coordinates": [[[-90.73121890835505, 43.55601432784351], [-90.72334117451653, 43.55601432784351], [-90.72334117451653, 43.56389206168201], [-90.73121890835505, 43.56389206168201], [-90.73121890835505, 43.55601432784351]]]}}, {"id": "15", "type": "Feature", "properties": {"field_id": "FIELD_0016", "region": "great_plains", "area_acres": 1525.0327666674953, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 91.7}, "geometry": {"type": "Polygon", "coordinates": [[[-97.55165508387148, 39.171969201538005], [-97.54379913791774, 39.171969201538005], [-97.54379913791774, 39.17982514749174], [-97.55165508387148, 39.17982514749174], [-97.55165508387148, 39.171969201538005]]]}}, {"id": "16", "type": "Feature", "properties": {"field_id": "FIELD_0017", "region": "great_plains", "area_acres": 1752.537352372446, "crop_code": 5, "crop_name": "Soybeans", "dominant_pct": 91.9}, "geometry": {"type": "Polygon", "coordinates": [[[-89.71683568842094, 39.62388341070313], [-89.70841412854047, 39.62388341070313], [-89.70841412854047, 39.63230497058362], [-89.71683568842094, 39.63230497058362], [-89.71683568842094, 39.62388341070313]]]}}, {"id": "17", "type": "Feature", "properties": {"field_id": "FIELD_0018", "region": "great_plains", "area_acres": 275.9765066550996, "crop_code": 5, "crop_name": "Soybeans", "dominant_pct": 90.3}, "geometry": {"type": "Polygon", "coordinates": [[[-89.97970114825272, 38.84387439405546], [-89.97635923666648, 38.84387439405546], [-89.97635923666648, 38.847216305641695], [-89.97970114825272, 38.847216305641695], [-89.97970114825272, 38.84387439405546]]]}}, {"id": "18", "type": "Feature", "properties": {"field_id": "FIELD_0019", "region": "great_plains", "area_acres": 1310.6219432414925, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 94.0}, "geometry": {"type": "Polygon", "coordinates": [[[-94.05482621181677, 40.53676749066575], [-94.04754342467184, 40.53676749066575], [-94.04754342467184, 40.54405027781068], [-94.05482621181677, 40.54405027781068], [-94.05482621181677, 40.53676749066575]]]}}, {"id": "19", "type": "Feature", "properties": {"field_id": "FIELD_0020", "region": "great_plains", "area_acres": 5650.775837198638, "crop_code": 5, "crop_name": "Soybeans", "dominant_pct": 86.2}, "geometry": {"type": "Polygon", "coordinates": [[[-90.93898762603621, 42.88520750621664], [-90.92386549701146, 42.88520750621664], [-90.92386549701146, 42.90032963524137], [-90.93898762603621, 42.90032963524137], [-90.93898762603621, 42.88520750621664]]]}}, {"id": "20", "type": "Feature", "properties": {"field_id": "FIELD_0021", "region": "great_plains", "area_acres": 4651.056129711819, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 93.7}, "geometry": {"type": "Polygon", "coordinates": [[[-88.74385090809602, 41.628900155456556], [-88.73013152163699, 41.628900155456556], [-88.73013152163699, 41.642619541915586], [-88.74385090809602, 41.642619541915586], [-88.74385090809602, 41.628900155456556]]]}}, {"id": "21", "type": "Feature", "properties": {"field_id": "FIELD_0022", "region": "great_plains", "area_acres": 341.4731863291507, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 89.3}, "geometry": {"type": "Polygon", "coordinates": [[[-93.50735194966637, 43.098372775690386], [-93.50363456756955, 43.098372775690386], [-93.50363456756955, 43.10209015778721], [-93.50735194966637, 43.10209015778721], [-93.50735194966637, 43.098372775690386]]]}}, {"id": "22", "type": "Feature", "properties": {"field_id": "FIELD_0023", "region": "great_plains", "area_acres": 5658.836796510435, "crop_code": 5, "crop_name": "Soybeans", "dominant_pct": 96.0}, "geometry": {"type": "Polygon", "coordinates": [[[-94.75573323533757, 39.85832747468893], [-94.74060032412748, 39.85832747468893], [-94.74060032412748, 39.873460385899016], [-94.75573323533757, 39.873460385899016], [-94.75573323533757, 39.85832747468893]]]}}, {"id": "23", "type": "Feature", "properties": {"field_id": "FIELD_0024", "region": "great_plains", "area_acres": 426.13045068964794, "crop_code": 1, "crop_name": "Corn", "dominant_pct": 89.7}, "geometry": {"type": "Polygon", "coordinates": [[[-93.27992709659395, 43.321200107244515], [-93.27577440016705, 43.321200107244515], [-93.27577440016705, 43.3253528036714], [-93.27992709659395, 43.3253528036714], [-93.27992709659395, 43.321200107244515]]]}}, {"id": "24", "type": "Feature", "properties": {"field_id": "FIELD_0025", "region": "great_plains", "area_acres": 964.5539104162021, "crop_code": 24, "crop_name": "Winter Wheat", "dominant_pct": 95.3}, "geometry": {"type": "Polygon", "coordinates": [[[-90.78582865262901, 43.090359081318766], [-90.77958092407353, 43.090359081318766], [-90.77958092407353, 43.096606809874245], [-90.78582865262901, 43.096606809874245], [-90.78582865262901, 43.090359081318766]]]}}]};
-
-        var cropColors = {"Corn": "#2E7D32", "Soybeans": "#F9A825", "Winter Wheat": "#E65100", "Fallow/Idle": "#9E9E9E"};
-
-        L.geoJSON(fieldData, {
-            style: function(feature) {
-                var crop = feature.properties.crop_name;
-                return {
-                    color: '#1B5E20',
-                    weight: 2,
-                    fillColor: cropColors[crop] || '#757575',
-                    fillOpacity: 0.6
-                };
+      var fieldData = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            id: '0',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0001',
+              region: 'great_plains',
+              crop_name: 'wheat',
+              area_acres: 6353.158446235238,
+              soil_name: 'Galva',
+              soil_pct: 95,
+              drainage_class: 'Well drained',
+              organic_matter: 4.0,
+              ph: 5.7,
+              clay_pct: 32.0,
+              sand_pct: 4.0,
+              silt_pct: 64.0,
+              water_capacity: 0.22,
+              cec: 25.2,
+              bulk_density: 1.28,
             },
-            onEachFeature: function(feature, layer) {
-                layer.bindPopup(
-                    '<div class="field-popup">' +
-                    '<b>Field:</b> ' + feature.properties.field_id + '<br>' +
-                    '<b>Crop:</b> ' + feature.properties.crop_name + '<br>' +
-                    '<b>Area:</b> ' + feature.properties.area_acres.toFixed(1) + ' acres<br>' +
-                    '<b>Dominant:</b> ' + feature.properties.dominant_pct + '%' +
-                    '</div>'
-                );
-            }
-        }).addTo(map);
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-96.17366932034082, 42.77124070215894],
+                  [-96.15763488233591, 42.77124070215894],
+                  [-96.15763488233591, 42.78727514016385],
+                  [-96.17366932034082, 42.78727514016385],
+                  [-96.17366932034082, 42.77124070215894],
+                ],
+              ],
+            },
+          },
+          {
+            id: '1',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0002',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 229.19273128977736,
+              soil_name: 'Clime',
+              soil_pct: 60,
+              drainage_class: 'Well drained',
+              organic_matter: 3.0,
+              ph: 7.5,
+              clay_pct: 41.0,
+              sand_pct: 5.0,
+              silt_pct: 54.0,
+              water_capacity: 0.16,
+              cec: 22.1,
+              bulk_density: 1.32,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-96.4415775491475, 38.9345890901451],
+                  [-96.43853204412846, 38.9345890901451],
+                  [-96.43853204412846, 38.937634595164134],
+                  [-96.4415775491475, 38.937634595164134],
+                  [-96.4415775491475, 38.9345890901451],
+                ],
+              ],
+            },
+          },
+          {
+            id: '2',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0003',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 138.85763923346028,
+              soil_name: 'Muscatine',
+              soil_pct: 95,
+              drainage_class: 'Somewhat poorly drained',
+              organic_matter: 5.0,
+              ph: 5.6,
+              clay_pct: 30.0,
+              sand_pct: 3.0,
+              silt_pct: 67.0,
+              water_capacity: 0.23,
+              cec: 25.5,
+              bulk_density: 1.32,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.92045948248821, 41.605504810010586],
+                  [-90.91808896159088, 41.605504810010586],
+                  [-90.91808896159088, 41.607875330907916],
+                  [-90.92045948248821, 41.607875330907916],
+                  [-90.92045948248821, 41.605504810010586],
+                ],
+              ],
+            },
+          },
+          {
+            id: '3',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0004',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 100.23255562853421,
+              soil_name: 'Warsaw',
+              soil_pct: 90,
+              drainage_class: 'Well drained',
+              organic_matter: 4.0,
+              ph: 6.8,
+              clay_pct: 18.0,
+              sand_pct: 58.0,
+              silt_pct: 24.0,
+              water_capacity: 0.12,
+              cec: 10.7,
+              bulk_density: 1.55,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-88.61547991873508, 42.330985624708376],
+                  [-88.61346590094993, 42.330985624708376],
+                  [-88.61346590094993, 42.33299964249352],
+                  [-88.61547991873508, 42.33299964249352],
+                  [-88.61547991873508, 42.330985624708376],
+                ],
+              ],
+            },
+          },
+          {
+            id: '4',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0005',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 77.41296339547014,
+              soil_name: 'Ladoga',
+              soil_pct: 95,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 3.0,
+              ph: 6.6,
+              clay_pct: 25.0,
+              sand_pct: 20.0,
+              silt_pct: 55.0,
+              water_capacity: 0.2,
+              cec: 19.5,
+              bulk_density: 1.35,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-91.88618358208754, 41.52459876297014],
+                  [-91.88424315482918, 41.52459876297014],
+                  [-91.88424315482918, 41.5265391902285],
+                  [-91.88618358208754, 41.5265391902285],
+                  [-91.88618358208754, 41.52459876297014],
+                ],
+              ],
+            },
+          },
+          {
+            id: '5',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0006',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 72.2857775833473,
+              soil_name: 'Leonard',
+              soil_pct: 85,
+              drainage_class: 'Poorly drained',
+              organic_matter: 2.7,
+              ph: 6.6,
+              clay_pct: 28.0,
+              sand_pct: 14.0,
+              silt_pct: 58.0,
+              water_capacity: 0.21,
+              cec: 22.4,
+              bulk_density: 1.3,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.9548264020652, 41.64356102858388],
+                  [-93.95281676452328, 41.64356102858388],
+                  [-93.95281676452328, 41.6455706661258],
+                  [-93.9548264020652, 41.6455706661258],
+                  [-93.9548264020652, 41.64356102858388],
+                ],
+              ],
+            },
+          },
+          {
+            id: '6',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0007',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 67.4589921875,
+              soil_name: 'Elco',
+              soil_pct: 95,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 1.5,
+              ph: 6.6,
+              clay_pct: 27.0,
+              sand_pct: 35.0,
+              silt_pct: 38.0,
+              water_capacity: 0.16,
+              cec: 14.5,
+              bulk_density: 1.45,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-94.76766027504736, 41.38342224726688],
+                  [-94.76565063750544, 41.38342224726688],
+                  [-94.76565063750544, 41.3854318848088],
+                  [-94.76766027504736, 41.3854318848088],
+                  [-94.76766027504736, 41.38342224726688],
+                ],
+              ],
+            },
+          },
+          {
+            id: '7',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0008',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 57.97124740976401,
+              soil_name: 'Anthroportic Udorthents',
+              soil_pct: 100,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 1.0,
+              ph: 6.3,
+              clay_pct: 20.0,
+              sand_pct: 40.0,
+              silt_pct: 40.0,
+              water_capacity: 0.14,
+              cec: 12.0,
+              bulk_density: 1.5,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-95.5981408842068, 41.28416778822824],
+                  [-95.59613124666488, 41.28416778822824],
+                  [-95.59613124666488, 41.28617742577016],
+                  [-95.5981408842068, 41.28617742577016],
+                  [-95.5981408842068, 41.28416778822824],
+                ],
+              ],
+            },
+          },
+          {
+            id: '8',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0009',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 52.87665482972175,
+              soil_name: 'Irwin',
+              soil_pct: 90,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 3.0,
+              ph: 6.5,
+              clay_pct: 26.0,
+              sand_pct: 24.0,
+              silt_pct: 50.0,
+              water_capacity: 0.19,
+              cec: 20.2,
+              bulk_density: 1.35,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-96.35485650297982, 41.37599958627841],
+                  [-96.3528468654379, 41.37599958627841],
+                  [-96.3528468654379, 41.37800922382033],
+                  [-96.35485650297982, 41.37800922382033],
+                  [-96.35485650297941, 41.37599958627841],
+                ],
+              ],
+            },
+          },
+          {
+            id: '9',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0010',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 50.3101416015625,
+              soil_name: 'Storden',
+              soil_pct: 86,
+              drainage_class: 'Well drained',
+              organic_matter: 2.5,
+              ph: 7.7,
+              clay_pct: 23.0,
+              sand_pct: 45.0,
+              silt_pct: 32.0,
+              water_capacity: 0.14,
+              cec: 15.0,
+              bulk_density: 1.48,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.76557653031384, 41.56876823486224],
+                  [-93.76356689277192, 41.56876823486224],
+                  [-93.76356689277192, 41.57077787240416],
+                  [-93.76557653031384, 41.57077787240416],
+                  [-93.76557653031384, 41.56876823486224],
+                ],
+              ],
+            },
+          },
+          {
+            id: '10',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0011',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 42.40813618914835,
+              soil_name: 'Burkhardt',
+              soil_pct: 100,
+              drainage_class: 'Somewhat excessively drained',
+              organic_matter: 2.0,
+              ph: 5.8,
+              clay_pct: 12.0,
+              sand_pct: 62.0,
+              silt_pct: 26.0,
+              water_capacity: 0.1,
+              cec: 7.5,
+              bulk_density: 1.6,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-95.1242341373291, 41.39953631598564],
+                  [-95.12222449978718, 41.39953631598564],
+                  [-95.12222449978718, 41.40154595352756],
+                  [-95.1242341373291, 41.40154595352756],
+                  [-95.1242341373291, 41.39953631598564],
+                ],
+              ],
+            },
+          },
+          {
+            id: '11',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0012',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 40.583333333333336,
+              soil_name: 'Kamrar',
+              soil_pct: 90,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 3.5,
+              ph: 5.8,
+              clay_pct: 27.0,
+              sand_pct: 16.0,
+              silt_pct: 57.0,
+              water_capacity: 0.21,
+              cec: 22.0,
+              bulk_density: 1.32,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.76696075409605, 41.48358514199654],
+                  [-93.76495111655413, 41.48358514199654],
+                  [-93.76495111655413, 41.48559477953846],
+                  [-93.76696075409605, 41.48559477953846],
+                  [-93.76696075409605, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '12',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0013',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 39.75,
+              soil_name: 'Judson',
+              soil_pct: 92,
+              drainage_class: 'Well drained',
+              organic_matter: 3.5,
+              ph: 6.5,
+              clay_pct: 26.0,
+              sand_pct: 30.0,
+              silt_pct: 44.0,
+              water_capacity: 0.18,
+              cec: 18.0,
+              bulk_density: 1.4,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.76766077514108, 41.48358514199654],
+                  [-93.76565113759916, 41.48358514199654],
+                  [-93.76565113759916, 41.48559477953846],
+                  [-93.76766077514108, 41.48559477953846],
+                  [-93.76766077514108, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '13',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0014',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 39.75,
+              soil_name: 'Urne',
+              soil_pct: 95,
+              drainage_class: 'Well drained',
+              organic_matter: 1.5,
+              ph: 6.2,
+              clay_pct: 20.0,
+              sand_pct: 48.0,
+              silt_pct: 32.0,
+              water_capacity: 0.14,
+              cec: 11.0,
+              bulk_density: 1.52,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.76836079618611, 41.48358514199654],
+                  [-93.76635115864419, 41.48358514199654],
+                  [-93.76635115864419, 41.48559477953846],
+                  [-93.76836079618611, 41.48559477953846],
+                  [-93.76836079618611, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '14',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0015',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 38.5,
+              soil_name: 'Seaton',
+              soil_pct: 97,
+              drainage_class: 'Well drained',
+              organic_matter: 2.0,
+              ph: 6.2,
+              clay_pct: 18.0,
+              sand_pct: 50.0,
+              silt_pct: 32.0,
+              water_capacity: 0.14,
+              cec: 10.0,
+              bulk_density: 1.5,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.76906081723114, 41.48358514199654],
+                  [-93.76705117968922, 41.48358514199654],
+                  [-93.76705117968922, 41.48559477953846],
+                  [-93.76906081723114, 41.48559477953846],
+                  [-93.76906081723114, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '15',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0016',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 37.875,
+              soil_name: 'Hord',
+              soil_pct: 90,
+              drainage_class: 'Well drained',
+              organic_matter: 2.0,
+              ph: 6.5,
+              clay_pct: 22.0,
+              sand_pct: 42.0,
+              silt_pct: 36.0,
+              water_capacity: 0.15,
+              cec: 13.5,
+              bulk_density: 1.45,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.76976083827618, 41.48358514199654],
+                  [-93.76775120073426, 41.48358514199654],
+                  [-93.76775120073426, 41.48559477953846],
+                  [-93.76976083827618, 41.48559477953846],
+                  [-93.76976083827618, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '16',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0017',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 36.125,
+              soil_name: 'Buckhart',
+              soil_pct: 93,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 3.5,
+              ph: 6.6,
+              clay_pct: 24.0,
+              sand_pct: 22.0,
+              silt_pct: 54.0,
+              water_capacity: 0.19,
+              cec: 18.5,
+              bulk_density: 1.38,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77046085932121, 41.48358514199654],
+                  [-93.76845122177929, 41.48358514199654],
+                  [-93.76845122177929, 41.48559477953846],
+                  [-93.77046085932121, 41.48559477953846],
+                  [-93.77046085932121, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '17',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0018',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 34.625,
+              soil_name: 'Winfield',
+              soil_pct: 95,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 2.5,
+              ph: 5.6,
+              clay_pct: 28.0,
+              sand_pct: 18.0,
+              silt_pct: 54.0,
+              water_capacity: 0.2,
+              cec: 21.0,
+              bulk_density: 1.35,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77116088036624, 41.48358514199654],
+                  [-93.76915124282432, 41.48358514199654],
+                  [-93.76915124282432, 41.48559477953846],
+                  [-93.77116088036624, 41.48559477953846],
+                  [-93.77116088036624, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '18',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0019',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 33.875,
+              soil_name: 'Gara',
+              soil_pct: 92,
+              drainage_class: 'Well drained',
+              organic_matter: 2.23,
+              ph: 6.8,
+              clay_pct: 30.0,
+              sand_pct: 16.0,
+              silt_pct: 54.0,
+              water_capacity: 0.19,
+              cec: 22.5,
+              bulk_density: 1.38,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77186090141127, 41.48358514199654],
+                  [-93.76985126386935, 41.48358514199654],
+                  [-93.76985126386935, 41.48559477953846],
+                  [-93.77186090141127, 41.48559477953846],
+                  [-93.77186090141127, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '19',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0020',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 32.625,
+              soil_name: 'Beavercreek',
+              soil_pct: 96,
+              drainage_class: 'Well drained',
+              organic_matter: 1.5,
+              ph: 6.7,
+              clay_pct: 24.0,
+              sand_pct: 38.0,
+              silt_pct: 38.0,
+              water_capacity: 0.16,
+              cec: 14.0,
+              bulk_density: 1.42,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.7725609224563, 41.48358514199654],
+                  [-93.77055128491438, 41.48358514199654],
+                  [-93.77055128491438, 41.48559477953846],
+                  [-93.7725609224563, 41.48559477953846],
+                  [-93.7725609224563, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '20',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0021',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 31.75,
+              soil_name: 'Catlin',
+              soil_pct: 99,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 3.5,
+              ph: 7.0,
+              clay_pct: 22.0,
+              sand_pct: 28.0,
+              silt_pct: 50.0,
+              water_capacity: 0.17,
+              cec: 15.0,
+              bulk_density: 1.42,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77326094350134, 41.48358514199654],
+                  [-93.77125130595942, 41.48358514199654],
+                  [-93.77125130595942, 41.48559477953846],
+                  [-93.77326094350134, 41.48559477953846],
+                  [-93.77326094350134, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '21',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0022',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 30.625,
+              soil_name: 'Dickman',
+              soil_pct: 95,
+              drainage_class: 'Well drained',
+              organic_matter: 1.5,
+              ph: 6.1,
+              clay_pct: 18.0,
+              sand_pct: 56.0,
+              silt_pct: 26.0,
+              water_capacity: 0.12,
+              cec: 9.5,
+              bulk_density: 1.55,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77396096454637, 41.48358514199654],
+                  [-93.77195132700445, 41.48358514199654],
+                  [-93.77195132700445, 41.48559477953846],
+                  [-93.77396096454637, 41.48559477953846],
+                  [-93.77396096454637, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '22',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0023',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 30.5,
+              soil_name: 'Knox',
+              soil_pct: 100,
+              drainage_class: 'Well drained',
+              organic_matter: 2.0,
+              ph: 6.5,
+              clay_pct: 18.0,
+              sand_pct: 48.0,
+              silt_pct: 34.0,
+              water_capacity: 0.14,
+              cec: 10.0,
+              bulk_density: 1.5,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.7746609855914, 41.48358514199654],
+                  [-93.77265134804948, 41.48358514199654],
+                  [-93.77265134804948, 41.48559477953846],
+                  [-93.7746609855914, 41.48559477953846],
+                  [-93.7746609855914, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '23',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0024',
+              region: 'great_plains',
+              crop_name: 'soybeans',
+              area_acres: 30.25,
+              soil_name: 'Moland',
+              soil_pct: 95,
+              drainage_class: 'Well drained',
+              organic_matter: 3.5,
+              ph: 6.5,
+              clay_pct: 24.0,
+              sand_pct: 22.0,
+              silt_pct: 54.0,
+              water_capacity: 0.19,
+              cec: 18.5,
+              bulk_density: 1.38,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77536100663644, 41.48358514199654],
+                  [-93.77335136909452, 41.48358514199654],
+                  [-93.77335136909452, 41.48559477953846],
+                  [-93.77536100663644, 41.48559477953846],
+                  [-93.77536100663644, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+          {
+            id: '24',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0025',
+              region: 'great_plains',
+              crop_name: 'corn',
+              area_acres: 29.625,
+              soil_name: 'Chaseburg',
+              soil_pct: 90,
+              drainage_class: 'Moderately well drained',
+              organic_matter: 2.5,
+              ph: 7.0,
+              clay_pct: 24.0,
+              sand_pct: 30.0,
+              silt_pct: 46.0,
+              water_capacity: 0.17,
+              cec: 16.0,
+              bulk_density: 1.42,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.77606102768147, 41.48358514199654],
+                  [-93.77405139013955, 41.48358514199654],
+                  [-93.77405139013955, 41.48559477953846],
+                  [-93.77606102768147, 41.48559477953846],
+                  [-93.77606102768147, 41.48358514199654],
+                ],
+              ],
+            },
+          },
+        ],
+      };
+
+      var cropColors = {
+        corn: '#FFD700',
+        soybeans: '#228B22',
+        wheat: '#FF8C00',
+        fallow: '#9E9E9E',
+      };
+
+      function getSoilColor(om) {
+        if (om < 2) return '#8D6E63';
+        if (om < 3) return '#A1887F';
+        if (om < 4) return '#BCAAA4';
+        return '#D7CCC8';
+      }
+
+      L.geoJSON(fieldData, {
+        style: function (feature) {
+          var crop = feature.properties.crop_name;
+          return {
+            color: '#1B5E20',
+            weight: 2,
+            fillColor: cropColors[crop] || '#757575',
+            fillOpacity: 0.6,
+          };
+        },
+        onEachFeature: function (feature, layer) {
+          var p = feature.properties;
+          layer.bindPopup(
+            '<div class="field-popup">' +
+              '<b>Field:</b> ' +
+              p.field_id +
+              '<br>' +
+              '<b>Area:</b> ' +
+              p.area_acres.toFixed(1) +
+              ' acres<br>' +
+              '<hr style="margin: 8px 0;">' +
+              '<b>Crop:</b> ' +
+              p.crop_name +
+              '<br>' +
+              '<hr style="margin: 8px 0;">' +
+              '<b>Soil:</b> ' +
+              p.soil_name +
+              ' (' +
+              p.soil_pct +
+              '%)<br>' +
+              '<b>Drainage:</b> ' +
+              p.drainage_class +
+              '<br>' +
+              '<b>Organic Matter:</b> ' +
+              p.organic_matter +
+              '%<br>' +
+              '<b>pH:</b> ' +
+              p.ph +
+              '<br>' +
+              '<b>Clay/Sand/Silt:</b> ' +
+              p.clay_pct +
+              '/' +
+              p.sand_pct +
+              '/' +
+              p.silt_pct +
+              '%<br>' +
+              '<b>CEC:</b> ' +
+              p.cec +
+              ' meq/100g<br>' +
+              '<b>Bulk Density:</b> ' +
+              p.bulk_density +
+              ' g/cm³' +
+              '</div>'
+          );
+        },
+      }).addTo(map);
+
+      var fieldData = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            id: '0',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0001',
+              region: 'great_plains',
+              area_acres: 6353.158446235238,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 93.5,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-96.17366932034082, 42.77124070215894],
+                  [-96.15763488233591, 42.77124070215894],
+                  [-96.15763488233591, 42.78727514016385],
+                  [-96.17366932034082, 42.78727514016385],
+                  [-96.17366932034082, 42.77124070215894],
+                ],
+              ],
+            },
+          },
+          {
+            id: '1',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0002',
+              region: 'great_plains',
+              area_acres: 229.19273128977736,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 90.2,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-96.4415775491475, 38.9345890901451],
+                  [-96.43853204412846, 38.9345890901451],
+                  [-96.43853204412846, 38.937634595164134],
+                  [-96.4415775491475, 38.937634595164134],
+                  [-96.4415775491475, 38.9345890901451],
+                ],
+              ],
+            },
+          },
+          {
+            id: '2',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0003',
+              region: 'great_plains',
+              area_acres: 138.85763923346028,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 97.3,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.92045948248821, 41.605504810010586],
+                  [-90.91808896159088, 41.605504810010586],
+                  [-90.91808896159088, 41.607875330907916],
+                  [-90.92045948248821, 41.607875330907916],
+                  [-90.92045948248821, 41.605504810010586],
+                ],
+              ],
+            },
+          },
+          {
+            id: '3',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0004',
+              region: 'great_plains',
+              area_acres: 100.23255562853421,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 90.1,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-88.61547991873508, 42.330985624708376],
+                  [-88.61346590094993, 42.330985624708376],
+                  [-88.61346590094993, 42.33299964249352],
+                  [-88.61547991873508, 42.33299964249352],
+                  [-88.61547991873508, 42.330985624708376],
+                ],
+              ],
+            },
+          },
+          {
+            id: '4',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0005',
+              region: 'great_plains',
+              area_acres: 111.81400231574848,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 89.2,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-91.88453199186416, 41.70382546101932],
+                  [-91.88240479837022, 41.70382546101932],
+                  [-91.88240479837022, 41.70595265451328],
+                  [-91.88453199186416, 41.70595265451328],
+                  [-91.88453199186416, 41.70382546101932],
+                ],
+              ],
+            },
+          },
+          {
+            id: '5',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0006',
+              region: 'great_plains',
+              area_acres: 502.81309149614566,
+              crop_code: 5,
+              crop_name: 'Soybeans',
+              dominant_pct: 87.1,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-91.88372649752208, 39.745119396442384],
+                  [-91.87921560803034, 39.745119396442384],
+                  [-91.87921560803034, 39.749630285934124],
+                  [-91.88372649752208, 39.749630285934124],
+                  [-91.88372649752208, 39.745119396442384],
+                ],
+              ],
+            },
+          },
+          {
+            id: '6',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0007',
+              region: 'great_plains',
+              area_acres: 773.298222383251,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 89.7,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.15103745010929, 40.733622841262786],
+                  [-90.14544332203043, 40.733622841262786],
+                  [-90.14544332203043, 40.73921696934164],
+                  [-90.15103745010929, 40.73921696934164],
+                  [-90.15103745010929, 40.733622841262786],
+                ],
+              ],
+            },
+          },
+          {
+            id: '7',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0008',
+              region: 'great_plains',
+              area_acres: 7549.388132397261,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 91.1,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.34111053118083, 43.8906458511801],
+                  [-93.32363160385957, 43.8906458511801],
+                  [-93.32363160385957, 43.90812477850135],
+                  [-93.34111053118083, 43.90812477850135],
+                  [-93.34111053118083, 43.8906458511801],
+                ],
+              ],
+            },
+          },
+          {
+            id: '8',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0009',
+              region: 'great_plains',
+              area_acres: 8995.725513153173,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 87.6,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-97.35902403998247, 39.01360477228847],
+                  [-97.33994410031193, 39.01360477228847],
+                  [-97.33994410031193, 39.03268471195903],
+                  [-97.35902403998247, 39.03268471195903],
+                  [-97.35902403998247, 39.01360477228847],
+                ],
+              ],
+            },
+          },
+          {
+            id: '9',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0010',
+              region: 'great_plains',
+              area_acres: 348.99436528796065,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 88.8,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-94.95574135729235, 42.84850503967271],
+                  [-94.95198325924024, 42.84850503967271],
+                  [-94.95198325924024, 42.852263137724826],
+                  [-94.95574135729235, 42.852263137724826],
+                  [-94.95574135729235, 42.84850503967271],
+                ],
+              ],
+            },
+          },
+          {
+            id: '10',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0011',
+              region: 'great_plains',
+              area_acres: 7139.252306461458,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 96.8,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-91.90853217637942, 42.09108235874712],
+                  [-91.89153466796816, 42.09108235874712],
+                  [-91.89153466796816, 42.108079867158374],
+                  [-91.90853217637942, 42.108079867158374],
+                  [-91.90853217637942, 42.09108235874712],
+                ],
+              ],
+            },
+          },
+          {
+            id: '11',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0012',
+              region: 'great_plains',
+              area_acres: 4791.788363995388,
+              crop_code: 5,
+              crop_name: 'Soybeans',
+              dominant_pct: 88.2,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-95.41916288455901, 43.44895971191351],
+                  [-95.40523748344064, 43.44895971191351],
+                  [-95.40523748344064, 43.46288511303188],
+                  [-95.41916288455901, 43.46288511303188],
+                  [-95.41916288455901, 43.44895971191351],
+                ],
+              ],
+            },
+          },
+          {
+            id: '12',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0013',
+              region: 'great_plains',
+              area_acres: 3689.1432185535864,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 88.7,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-95.9266926742685, 40.54482594399709],
+                  [-95.91447406836774, 40.54482594399709],
+                  [-95.91447406836774, 40.557044549897846],
+                  [-95.9266926742685, 40.557044549897846],
+                  [-95.9266926742685, 40.54482594399709],
+                ],
+              ],
+            },
+          },
+          {
+            id: '13',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0014',
+              region: 'great_plains',
+              area_acres: 8837.111104774,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 92.2,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.25812725686293, 43.80805227611328],
+                  [-90.23921627591477, 43.80805227611328],
+                  [-90.23921627591477, 43.82696325706143],
+                  [-90.25812725686293, 43.82696325706143],
+                  [-90.25812725686293, 43.80805227611328],
+                ],
+              ],
+            },
+          },
+          {
+            id: '14',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0015',
+              region: 'great_plains',
+              area_acres: 1533.5036281089058,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 87.0,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.73121890835505, 43.55601432784351],
+                  [-90.72334117451653, 43.55601432784351],
+                  [-90.72334117451653, 43.56389206168201],
+                  [-90.73121890835505, 43.56389206168201],
+                  [-90.73121890835505, 43.55601432784351],
+                ],
+              ],
+            },
+          },
+          {
+            id: '15',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0016',
+              region: 'great_plains',
+              area_acres: 1525.0327666674953,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 91.7,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-97.55165508387148, 39.171969201538005],
+                  [-97.54379913791774, 39.171969201538005],
+                  [-97.54379913791774, 39.17982514749174],
+                  [-97.55165508387148, 39.17982514749174],
+                  [-97.55165508387148, 39.171969201538005],
+                ],
+              ],
+            },
+          },
+          {
+            id: '16',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0017',
+              region: 'great_plains',
+              area_acres: 1752.537352372446,
+              crop_code: 5,
+              crop_name: 'Soybeans',
+              dominant_pct: 91.9,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-89.71683568842094, 39.62388341070313],
+                  [-89.70841412854047, 39.62388341070313],
+                  [-89.70841412854047, 39.63230497058362],
+                  [-89.71683568842094, 39.63230497058362],
+                  [-89.71683568842094, 39.62388341070313],
+                ],
+              ],
+            },
+          },
+          {
+            id: '17',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0018',
+              region: 'great_plains',
+              area_acres: 275.9765066550996,
+              crop_code: 5,
+              crop_name: 'Soybeans',
+              dominant_pct: 90.3,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-89.97970114825272, 38.84387439405546],
+                  [-89.97635923666648, 38.84387439405546],
+                  [-89.97635923666648, 38.847216305641695],
+                  [-89.97970114825272, 38.847216305641695],
+                  [-89.97970114825272, 38.84387439405546],
+                ],
+              ],
+            },
+          },
+          {
+            id: '18',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0019',
+              region: 'great_plains',
+              area_acres: 1310.6219432414925,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 94.0,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-94.05482621181677, 40.53676749066575],
+                  [-94.04754342467184, 40.53676749066575],
+                  [-94.04754342467184, 40.54405027781068],
+                  [-94.05482621181677, 40.54405027781068],
+                  [-94.05482621181677, 40.53676749066575],
+                ],
+              ],
+            },
+          },
+          {
+            id: '19',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0020',
+              region: 'great_plains',
+              area_acres: 5650.775837198638,
+              crop_code: 5,
+              crop_name: 'Soybeans',
+              dominant_pct: 86.2,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.93898762603621, 42.88520750621664],
+                  [-90.92386549701146, 42.88520750621664],
+                  [-90.92386549701146, 42.90032963524137],
+                  [-90.93898762603621, 42.90032963524137],
+                  [-90.93898762603621, 42.88520750621664],
+                ],
+              ],
+            },
+          },
+          {
+            id: '20',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0021',
+              region: 'great_plains',
+              area_acres: 4651.056129711819,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 93.7,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-88.74385090809602, 41.628900155456556],
+                  [-88.73013152163699, 41.628900155456556],
+                  [-88.73013152163699, 41.642619541915586],
+                  [-88.74385090809602, 41.642619541915586],
+                  [-88.74385090809602, 41.628900155456556],
+                ],
+              ],
+            },
+          },
+          {
+            id: '21',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0022',
+              region: 'great_plains',
+              area_acres: 341.4731863291507,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 89.3,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.50735194966637, 43.098372775690386],
+                  [-93.50363456756955, 43.098372775690386],
+                  [-93.50363456756955, 43.10209015778721],
+                  [-93.50735194966637, 43.10209015778721],
+                  [-93.50735194966637, 43.098372775690386],
+                ],
+              ],
+            },
+          },
+          {
+            id: '22',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0023',
+              region: 'great_plains',
+              area_acres: 5658.836796510435,
+              crop_code: 5,
+              crop_name: 'Soybeans',
+              dominant_pct: 96.0,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-94.75573323533757, 39.85832747468893],
+                  [-94.74060032412748, 39.85832747468893],
+                  [-94.74060032412748, 39.873460385899016],
+                  [-94.75573323533757, 39.873460385899016],
+                  [-94.75573323533757, 39.85832747468893],
+                ],
+              ],
+            },
+          },
+          {
+            id: '23',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0024',
+              region: 'great_plains',
+              area_acres: 426.13045068964794,
+              crop_code: 1,
+              crop_name: 'Corn',
+              dominant_pct: 89.7,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-93.27992709659395, 43.321200107244515],
+                  [-93.27577440016705, 43.321200107244515],
+                  [-93.27577440016705, 43.3253528036714],
+                  [-93.27992709659395, 43.3253528036714],
+                  [-93.27992709659395, 43.321200107244515],
+                ],
+              ],
+            },
+          },
+          {
+            id: '24',
+            type: 'Feature',
+            properties: {
+              field_id: 'FIELD_0025',
+              region: 'great_plains',
+              area_acres: 964.5539104162021,
+              crop_code: 24,
+              crop_name: 'Winter Wheat',
+              dominant_pct: 95.3,
+            },
+            geometry: {
+              type: 'Polygon',
+              coordinates: [
+                [
+                  [-90.78582865262901, 43.090359081318766],
+                  [-90.77958092407353, 43.090359081318766],
+                  [-90.77958092407353, 43.096606809874245],
+                  [-90.78582865262901, 43.096606809874245],
+                  [-90.78582865262901, 43.090359081318766],
+                ],
+              ],
+            },
+          },
+        ],
+      };
+
+      var cropColors = {
+        Corn: '#2E7D32',
+        Soybeans: '#F9A825',
+        'Winter Wheat': '#E65100',
+        'Fallow/Idle': '#9E9E9E',
+      };
+
+      L.geoJSON(fieldData, {
+        style: function (feature) {
+          var crop = feature.properties.crop_name;
+          return {
+            color: '#1B5E20',
+            weight: 2,
+            fillColor: cropColors[crop] || '#757575',
+            fillOpacity: 0.6,
+          };
+        },
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup(
+            '<div class="field-popup">' +
+              '<b>Field:</b> ' +
+              feature.properties.field_id +
+              '<br>' +
+              '<b>Crop:</b> ' +
+              feature.properties.crop_name +
+              '<br>' +
+              '<b>Area:</b> ' +
+              feature.properties.area_acres.toFixed(1) +
+              ' acres<br>' +
+              '<b>Dominant:</b> ' +
+              feature.properties.dominant_pct +
+              '%' +
+              '</div>'
+          );
+        },
+      }).addTo(map);
     </script>
-</body>
+  </body>
 </html>

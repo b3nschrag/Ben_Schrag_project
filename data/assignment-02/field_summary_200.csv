@@ -1,0 +1,200 @@
+field_id,area_acres,crop_name,region,soil_name,soil_pct,drainage_class,organic_matter,ph,clay_pct,sand_pct,silt_pct,cec,bulk_density,water_capacity
+FIELD_0001,6353.158446235238,wheat,great_plains,Galva,95.0,Well drained,4.0,5.7,32.0,4.0,64.0,25.2,1.28,0.22
+FIELD_0002,229.19273128977736,corn,great_plains,Clime,60.0,Well drained,3.0,7.5,41.0,5.0,54.0,22.1,1.32,0.16
+FIELD_0003,138.85763923346028,corn,great_plains,Muscatine,95.0,Somewhat poorly drained,5.0,5.6,30.0,3.0,67.0,25.5,1.32,0.23
+FIELD_0004,100.2325556285342,soybeans,great_plains,Warsaw,90.0,Well drained,4.0,6.8,20.0,36.0,44.0,17.5,1.38,0.22
+FIELD_0005,111.81400231574848,corn,great_plains,Ladoga,95.0,Moderately well drained,3.0,6.6,25.0,2.0,73.0,20.8,1.33,0.2
+FIELD_0006,502.81309149614566,corn,great_plains,Leonard,85.0,Poorly drained,2.7,6.6,25.0,5.0,70.0,20.7,1.38,0.21
+FIELD_0007,773.298222383251,wheat,great_plains,Elco,95.0,Moderately well drained,1.5,6.6,23.0,4.0,73.0,19.5,1.42,0.19
+FIELD_0008,7549.388132397261,wheat,great_plains,Anthroportic Udorthents,100.0,Moderately well drained,1.0,6.3,25.0,35.0,40.0,16.6,1.4,0.2
+FIELD_0009,8995.725513153173,wheat,great_plains,Irwin,90.0,Moderately well drained,3.0,6.5,33.0,8.0,59.0,27.2,1.3,0.21
+FIELD_0010,348.99436528796065,soybeans,great_plains,Storden,86.0,Well drained,2.5,7.7,21.0,46.0,33.0,16.0,1.3,0.18
+FIELD_0011,7139.252306461458,wheat,great_plains,Burkhardt,100.0,Somewhat excessively drained,2.0,5.8,9.0,67.4,23.6,17.5,1.45,0.13
+FIELD_0012,4791.788363995388,wheat,great_plains,Kamrar,90.0,Moderately well drained,3.5,5.8,37.0,25.0,38.0,29.3,1.3,0.18
+FIELD_0013,3689.1432185535864,soybeans,great_plains,Judson,92.0,Well drained,3.5,6.5,26.0,4.0,70.0,22.1,1.33,0.17
+FIELD_0014,8837.111104774,corn,great_plains,Urne,95.0,Well drained,1.5,6.2,14.0,66.1,19.9,7.6,1.5,0.17
+FIELD_0015,1533.5036281089058,soybeans,great_plains,Seaton,97.0,Well drained,2.0,6.2,17.0,6.0,77.0,14.7,1.28,0.23
+FIELD_0016,1525.0327666674953,soybeans,great_plains,Hord,90.0,Well drained,2.0,6.5,22.0,11.0,67.0,18.6,1.42,0.21
+FIELD_0017,1752.537352372446,corn,great_plains,Buckhart,93.0,Moderately well drained,3.5,6.6,24.0,4.0,72.0,20.5,1.28,0.23
+FIELD_0018,275.9765066550996,corn,great_plains,Winfield,95.0,Moderately well drained,2.5,5.6,14.3,3.0,82.7,12.7,1.38,0.2
+FIELD_0019,1310.6219432414923,wheat,great_plains,Gara,92.0,Well drained,2.23,6.8,18.0,50.0,32.0,27.5,1.47,0.2
+FIELD_0020,5650.775837198638,wheat,great_plains,Beavercreek,96.0,Well drained,1.5,6.7,11.5,62.5,26.0,6.2,1.5,0.15
+FIELD_0021,4651.056129711819,corn,great_plains,Catlin,99.0,Moderately well drained,3.5,7.0,26.0,4.0,70.0,22.1,1.35,0.22
+FIELD_0022,341.4731863291507,wheat,great_plains,Dickman,95.0,Well drained,1.5,6.1,12.0,68.3,19.7,10.0,1.35,0.14
+FIELD_0023,5658.836796510435,wheat,great_plains,Knox,100.0,Well drained,2.0,6.5,22.5,4.0,73.5,14.0,1.25,0.23
+FIELD_0024,426.13045068964794,soybeans,great_plains,Moland,95.0,Well drained,3.5,6.5,22.5,28.0,49.5,19.4,1.38,0.23
+FIELD_0025,964.553910416202,soybeans,great_plains,Chaseburg,90.0,Moderately well drained,2.5,7.0,14.0,14.2,71.8,12.5,1.45,0.23
+FIELD_0026,15380.86239315992,wheat,great_plains_MO,Sylvania,95.0,Moderately well drained,4.5,5.7,26.0,34.2,39.8,20.0,1.33,0.19
+FIELD_0027,18775.29792547052,wheat,great_plains_MO,Mexico,90.0,Poorly drained,1.87,6.5,17.7,4.9,77.4,15.2,1.39,0.23
+FIELD_0028,4815.952054846081,soybeans,great_plains_KS,Harney,95.0,Well drained,2.0,6.7,29.0,9.0,62.0,23.3,1.44,0.21
+FIELD_0029,17879.31821134918,corn,great_plains_IA,Sparta,95.0,Excessively drained,1.5,6.2,6.0,84.0,10.0,6.5,1.63,0.15
+FIELD_0030,17822.759149206136,corn,great_plains_NE,Zook,100.0,Poorly drained,3.0,5.8,23.0,24.6,52.4,22.5,1.33,0.22
+FIELD_0031,5168.135694403408,corn,great_plains_KS,Dennis,92.0,Somewhat poorly drained,2.5,5.6,19.0,23.0,58.0,10.3,1.4,0.2
+FIELD_0032,22156.97951989345,corn,great_plains_MO,Maplegrove,97.0,Moderately well drained,2.5,6.4,15.0,14.0,71.0,8.2,1.3,0.23
+FIELD_0033,38667.05155242178,soybeans,great_plains_ND,Wildrose,78.0,Well drained,5.0,7.2,50.0,10.0,40.0,36.5,1.3,0.14
+FIELD_0034,2837.640443155086,wheat,great_plains_MO,Judson,90.0,Well drained,4.5,6.5,23.0,8.0,69.0,20.0,1.33,0.22
+FIELD_0035,14714.768060927754,soybeans,great_plains_NE,Valentine,90.0,Excessively drained,0.75,6.5,4.0,93.0,3.0,3.4,1.54,0.08
+FIELD_0036,13930.71935415193,soybeans,great_plains_KS,Ivan,90.0,Well drained,3.0,7.9,24.0,7.0,69.0,19.6,1.38,0.22
+FIELD_0037,3974.676689630155,wheat,great_plains_ND,Glyndon,80.0,Somewhat poorly drained,4.0,7.9,20.0,11.4,68.6,15.9,1.15,0.22
+FIELD_0038,27279.26867779039,soybeans,great_plains_IA,Muscatine,95.0,Somewhat poorly drained,5.0,5.6,30.0,3.0,67.0,25.5,1.32,0.23
+FIELD_0039,12835.739964026396,corn,great_plains_ND,Harriet,84.0,Poorly drained,2.0,7.6,26.0,28.0,46.0,20.5,1.4,0.21
+FIELD_0040,1847.077078216688,wheat,great_plains_MO,Tanglenook,100.0,Poorly drained,2.08,6.4,38.7,3.8,57.5,30.9,1.42,0.2
+FIELD_0041,5518.056863192742,soybeans,great_plains_MO,Eldorado,95.0,Well drained,2.0,5.8,19.0,28.0,53.0,11.9,1.4,0.18
+FIELD_0042,24415.79197402079,soybeans,great_plains_SD,Jansen,100.0,Well drained,1.5,6.2,5.0,79.2,15.8,5.0,1.65,0.1
+FIELD_0043,27656.98187223049,wheat,great_plains_KS,Bankard,100.0,Somewhat excessively drained,1.0,7.9,6.0,84.9,9.1,4.0,1.88,0.13
+FIELD_0044,12200.183408238952,soybeans,great_plains_KS,Harney,95.0,Well drained,2.0,6.7,24.0,9.0,67.0,19.8,1.44,0.23
+FIELD_0045,2331.636705097295,wheat,great_plains_NE,Gates,85.0,Well drained,0.75,7.5,15.0,59.0,26.0,10.8,1.5,0.21
+FIELD_0046,6933.854283275077,corn,great_plains_NE,Hord,100.0,Well drained,3.0,6.5,22.0,8.0,70.0,15.0,1.35,0.22
+FIELD_0047,4463.871620448673,soybeans,great_plains_MO,Viraton,95.0,Moderately well drained,4.8,6.5,13.4,9.0,77.6,7.4,1.4,0.22
+FIELD_0048,6113.012705453901,wheat,great_plains_NE,Valentine,92.0,Excessively drained,1.5,6.7,6.0,87.0,7.0,5.1,1.5,0.11
+FIELD_0049,10808.990612302116,wheat,great_plains_NE,Arthur,100.0,Well drained,2.5,6.5,30.5,6.9,62.6,27.5,1.33,0.23
+FIELD_0050,1241.2749607511269,wheat,great_plains_ND,Noonan,45.0,Moderately well drained,4.0,6.6,22.0,38.0,40.0,18.8,1.4,0.19
+FIELD_0051,1426.9746684690392,corn,great_plains_ND,Tonka,90.0,Poorly drained,7.0,7.0,23.0,24.0,53.0,19.9,1.25,0.23
+FIELD_0052,39344.165315765495,corn,great_plains_SD,Heil,90.0,Poorly drained,4.5,6.5,26.0,23.0,51.0,21.8,1.3,0.2
+FIELD_0053,33320.13375314779,wheat,great_plains_NE,Strahan,100.0,Well drained,2.7,7.0,22.5,9.5,68.0,17.5,1.28,0.23
+FIELD_0054,5157.070714152492,corn,great_plains_SD,Chantier,90.0,Well drained,2.0,7.8,57.0,5.0,38.0,41.8,1.05,0.1
+FIELD_0055,24831.132089642444,wheat,great_plains_IA,Humeston,100.0,Poorly drained,3.5,6.5,26.0,15.0,59.0,21.6,1.4,0.22
+FIELD_0056,31115.599101032814,corn,great_plains_IA,Adair,100.0,Somewhat poorly drained,2.2,6.2,31.0,25.0,44.0,27.5,1.3,0.22
+FIELD_0057,2674.9392908650375,wheat,great_plains_NE,Satanta,90.0,Well drained,2.0,7.0,18.0,43.0,39.0,15.5,1.35,0.2
+FIELD_0058,12336.342257820075,soybeans,great_plains_NE,Richfield,95.0,Well drained,2.0,7.2,21.0,41.6,37.4,17.5,1.33,0.16
+FIELD_0059,3186.484132488695,soybeans,great_plains_IA,Frankville,95.0,Well drained,2.5,6.7,21.5,11.2,67.3,22.5,1.33,0.22
+FIELD_0060,9501.08932242318,wheat,great_plains_ND,Bearden,45.0,Somewhat poorly drained,5.0,7.6,33.0,6.0,61.0,27.7,1.3,0.2
+FIELD_0061,10990.398926600845,wheat,great_plains_KS,Smolan,90.0,Moderately well drained,3.0,6.0,29.0,12.0,59.0,23.7,1.38,0.21
+FIELD_0062,29242.99414748844,wheat,great_plains_NE,Kutch,95.0,Well drained,3.0,6.7,30.5,33.2,36.3,27.5,1.33,0.19
+FIELD_0063,31488.287848662236,soybeans,great_plains_MO,Cedargap,98.0,Well drained,3.5,6.7,20.0,22.0,58.0,17.4,1.42,0.17
+FIELD_0064,1431.2633619769376,corn,great_plains_MO,Hosmer,95.0,Moderately well drained,1.5,6.6,15.0,4.0,81.0,8.1,1.45,0.21
+FIELD_0065,4515.619636272951,wheat,great_plains_KS,Sampsel,95.0,Poorly drained,3.5,6.5,31.0,10.0,59.0,31.1,1.4,0.23
+FIELD_0066,4033.765299251499,wheat,great_plains_ND,Fossum,90.0,Poorly drained,4.0,7.7,12.0,70.0,18.0,11.6,1.4,0.17
+FIELD_0067,6269.090683602627,soybeans,great_plains_NE,Wadena,100.0,Well drained,4.0,6.7,22.5,39.8,37.7,22.5,1.4,0.21
+FIELD_0068,7243.69660465797,wheat,great_plains_MO,Humansville,90.0,Poorly drained,5.2,5.8,22.2,3.9,73.9,19.4,1.43,0.23
+FIELD_0069,15655.740324254808,corn,great_plains_NE,Busher,100.0,Well drained,2.0,7.0,12.0,63.6,24.4,11.0,1.3,0.21
+FIELD_0070,3977.990539185349,corn,great_plains_SD,Highmore,90.0,Well drained,3.0,6.4,22.0,10.0,68.0,18.9,1.4,0.21
+FIELD_0071,13932.198481736594,corn,great_plains_NE,Deroin,95.0,Well drained,2.0,6.1,31.0,14.0,55.0,25.3,1.39,0.21
+FIELD_0072,31914.184495264886,corn,great_plains_IA,Salida,100.0,Excessively drained,2.0,7.3,10.0,66.6,23.4,12.5,1.4,0.11
+FIELD_0073,13376.055399970455,wheat,great_plains_ND,Williams,54.0,Well drained,3.5,6.9,22.0,38.0,40.0,19.0,1.4,0.16
+FIELD_0074,26535.28931049252,corn,great_plains_MO,Eldon,95.0,Well drained,2.0,5.9,21.0,26.3,52.7,11.4,1.48,0.16
+FIELD_0075,12974.292124331045,corn,great_plains_ND,Williams,54.0,Well drained,3.5,6.9,22.0,38.0,40.0,19.0,1.45,0.16
+FIELD_0076,32195.30190749132,wheat,great_plains_KS,Manter,99.0,Well drained,1.8,7.2,11.0,70.0,19.0,9.9,1.45,0.13
+FIELD_0077,15083.471443660848,wheat,great_plains_SD,Huggins,85.0,Well drained,3.0,7.0,23.5,21.7,54.8,17.5,1.2,0.21
+FIELD_0078,10203.981259822614,soybeans,great_plains_IA,Marshall,100.0,Well drained,3.3,5.9,31.0,3.0,66.0,22.3,1.24,0.22
+FIELD_0079,28509.47642996337,corn,great_plains_IA,Okoboji,95.0,Very poorly drained,15.0,7.0,25.0,24.0,51.0,41.0,1.23,0.24
+FIELD_0080,25677.465337751015,wheat,great_plains_KS,Missler,100.0,Well drained,2.0,7.5,35.0,17.3,47.7,19.0,1.3,0.22
+FIELD_0081,35568.576414693605,corn,great_plains_ND,Heil,84.0,Poorly drained,4.5,6.5,35.0,16.9,48.1,34.0,1.2,0.19
+FIELD_0082,4190.375742780996,wheat,great_plains_SD,Waubay,90.0,Moderately well drained,5.0,6.4,29.0,7.0,64.0,24.7,1.25,0.22
+FIELD_0083,4249.385749221217,corn,great_plains_KS,Irwin,90.0,Moderately well drained,3.0,6.5,33.0,8.0,59.0,27.2,1.3,0.21
+FIELD_0084,8674.766768032714,wheat,great_plains_MO,Ladoga,100.0,Moderately well drained,3.0,5.9,19.2,5.2,75.6,13.9,1.33,0.23
+FIELD_0085,24820.92637042803,soybeans,great_plains_SD,Badus,90.0,Poorly drained,6.0,7.9,28.5,7.1,64.4,28.5,1.18,0.21
+FIELD_0086,33542.94560431844,soybeans,great_plains_IA,Plainfield,96.0,Excessively drained,1.25,5.7,4.0,92.0,4.0,3.6,1.55,0.08
+FIELD_0087,10058.786794767111,wheat,great_plains_MO,Hurst,95.0,Somewhat poorly drained,2.0,6.2,24.0,5.0,71.0,19.8,1.42,0.23
+FIELD_0088,4459.004229154938,soybeans,great_plains_ND,Parshall,83.0,Well drained,2.5,6.7,14.0,69.6,16.4,12.5,1.4,0.17
+FIELD_0089,26173.771762770255,soybeans,great_plains_SD,Kolls,90.0,Poorly drained,4.0,7.3,60.0,2.0,38.0,44.7,1.1,0.13
+FIELD_0090,7647.110935104418,soybeans,great_plains_MO,Tick,90.0,Well drained,2.0,4.9,13.0,29.0,58.0,9.1,1.33,0.12
+FIELD_0091,22545.43056361791,corn,great_plains_NE,Muir,100.0,Well drained,3.0,6.5,22.5,9.5,68.0,17.5,1.38,0.23
+FIELD_0092,30602.04175343279,soybeans,great_plains_SD,Busher,100.0,Well drained,2.0,7.0,10.0,63.5,26.5,10.0,1.4,0.17
+FIELD_0093,19439.154577980415,corn,great_plains_IA,Ocheyedan,100.0,Well drained,3.5,6.5,25.5,38.1,36.4,22.5,1.43,0.21
+FIELD_0094,22660.314011215356,wheat,great_plains_KS,Holdrege,96.0,Well drained,2.0,6.2,22.0,11.0,67.0,18.6,1.4,0.21
+FIELD_0095,17599.715186142963,soybeans,great_plains_ND,Gardena,85.0,Moderately well drained,6.0,6.8,15.0,42.0,43.0,13.7,1.3,0.21
+FIELD_0096,17196.31278939326,corn,great_plains_IA,Deloit,100.0,Well drained,4.0,6.7,22.0,41.1,36.9,22.5,1.38,0.21
+FIELD_0097,13870.47256287588,corn,great_plains_ND,Cherry,78.0,Well drained,1.75,7.2,23.0,9.5,67.5,20.0,1.3,0.22
+FIELD_0098,32312.41381632192,wheat,great_plains_MO,Loring,100.0,Moderately well drained,1.25,5.3,13.0,7.6,79.4,11.4,1.42,0.22
+FIELD_0099,20651.120523768503,soybeans,great_plains_SD,Arvilla,95.0,Somewhat excessively drained,2.5,7.3,12.0,68.3,19.7,11.8,1.5,0.14
+FIELD_0100,11995.031901157266,soybeans,great_plains_ND,Arnegard,82.0,Well drained,4.5,6.7,23.0,41.0,36.0,20.0,1.45,0.19
+FIELD_0101,10654.495058732356,corn,great_plains_KS,Colby,100.0,Well drained,0.75,7.9,21.0,11.3,67.7,11.5,1.25,0.23
+FIELD_0102,11409.10078838933,corn,great_plains_SD,Highmore,90.0,Well drained,3.0,6.4,22.0,10.0,68.0,18.9,1.4,0.21
+FIELD_0103,7532.551184846181,corn,great_plains_KS,Harney,97.0,Well drained,2.0,6.7,24.0,9.0,67.0,19.8,1.35,0.23
+FIELD_0104,9127.384551034487,soybeans,great_plains_SD,Opal,90.0,Well drained,3.0,7.6,55.0,6.0,39.0,41.0,1.23,0.12
+FIELD_0105,19282.354595710465,corn,great_plains_KS,Kipson,90.0,Somewhat excessively drained,6.0,7.9,30.0,12.0,58.0,24.1,1.19,0.18
+FIELD_0106,28377.264060645055,wheat,great_plains_NE,Valentine,85.0,Excessively drained,0.75,6.5,3.0,94.0,3.0,2.7,1.59,0.08
+FIELD_0107,4669.660024763061,soybeans,great_plains_KS,Ulysses,99.0,Well drained,1.8,7.5,26.0,20.0,54.0,23.0,1.36,0.22
+FIELD_0108,4098.618703069182,soybeans,great_plains_SD,Huggins,85.0,Well drained,3.0,7.0,23.5,21.7,54.8,17.5,1.2,0.21
+FIELD_0109,9667.85364411651,wheat,great_plains_NE,Marshall,100.0,Well drained,3.3,5.9,31.0,3.0,66.0,22.3,1.24,0.22
+FIELD_0110,20764.893336019104,corn,great_plains_ND,Grassna,88.0,Well drained,4.5,7.0,26.0,12.0,62.0,22.3,1.3,0.23
+FIELD_0111,24404.577185250077,soybeans,great_plains_SD,Dupree,90.0,Well drained,2.0,6.7,57.0,5.0,38.0,47.5,1.23,0.1
+FIELD_0112,15986.782856555708,wheat,great_plains_ND,Arveson,80.0,Poorly drained,5.0,7.9,18.0,43.2,38.8,16.1,1.33,0.18
+FIELD_0113,1357.6871408702964,wheat,great_plains_IA,Algansee,55.0,Somewhat poorly drained,4.0,6.7,6.0,80.0,14.0,5.6,1.51,0.17
+FIELD_0114,4118.264126995638,corn,great_plains_MO,Hildebrecht,90.0,Moderately well drained,3.75,5.4,12.9,3.3,83.8,13.0,1.38,0.23
+FIELD_0115,10462.483640010882,wheat,great_plains_MO,Snead,100.0,Moderately well drained,5.8,5.9,58.6,0.8,40.6,30.0,1.3,0.2
+FIELD_0116,33435.42860861174,corn,great_plains_SD,Heil,94.0,Poorly drained,4.5,6.5,22.5,22.4,55.1,19.3,1.3,0.2
+FIELD_0117,10367.213495721417,wheat,great_plains_KS,Tobin,95.0,Well drained,3.0,6.5,22.0,10.0,68.0,18.9,1.32,0.22
+FIELD_0118,19145.859927319205,corn,great_plains_KS,Knox,100.0,Well drained,2.6,7.1,28.2,6.2,65.6,21.9,1.25,0.22
+FIELD_0119,3088.3730241690405,wheat,great_plains_SD,Bon,85.0,Moderately well drained,5.0,7.5,22.0,38.0,40.0,18.5,1.3,0.2
+FIELD_0120,5567.7606787014,wheat,great_plains_ND,Tonka,73.0,Poorly drained,7.0,7.0,23.0,24.0,53.0,19.9,1.25,0.23
+FIELD_0121,31637.80770472801,wheat,great_plains_NE,Gravel pits,95.0,Well drained,0.05,7.0,0.5,97.9,1.6,15.5,1.35,0.02
+FIELD_0122,11446.70715227223,soybeans,great_plains_IA,Monona,95.0,Well drained,3.4,6.2,23.0,4.0,73.0,23.1,1.28,0.23
+FIELD_0123,5064.720209852701,wheat,great_plains_SD,Agar,90.0,Well drained,3.0,6.4,22.0,9.4,68.6,18.9,1.2,0.21
+FIELD_0124,2459.995294916398,corn,great_plains_ND,Straw,74.0,Well drained,4.0,7.2,24.0,39.1,36.9,25.0,1.15,0.21
+FIELD_0125,15838.94110040352,wheat,great_plains_MO,Lecoma,90.0,Well drained,1.5,6.5,12.0,45.0,43.0,6.5,1.45,0.16
+FIELD_0126,17443.00200484904,wheat,great_plains_NE,Alice,100.0,Well drained,2.0,7.2,12.5,67.3,20.2,12.5,1.4,0.14
+FIELD_0127,9911.4261412285,soybeans,great_plains_ND,Serden,82.0,Excessively drained,1.0,6.7,6.0,92.7,1.3,5.0,1.55,0.1
+FIELD_0128,7391.88955590697,wheat,great_plains_MO,Farrenburg,90.0,Moderately well drained,0.75,5.8,6.9,71.1,22.0,4.6,1.45,0.17
+FIELD_0129,7444.307913641324,wheat,great_plains_SD,Keith,90.0,Well drained,3.5,7.0,21.0,19.0,60.0,19.1,1.25,0.21
+FIELD_0130,15380.861342058057,soybeans,great_plains_MO,Gasconade,90.0,Somewhat excessively drained,6.0,7.2,39.0,20.8,40.2,32.5,1.35,0.14
+FIELD_0131,22208.05323641658,wheat,great_plains_SD,Hoven,90.0,Poorly drained,3.0,6.0,22.0,22.0,56.0,18.6,1.2,0.21
+FIELD_0132,13710.861109665566,corn,great_plains_ND,Parshall,83.0,Well drained,2.5,6.7,14.0,69.6,16.4,12.5,1.4,0.17
+FIELD_0133,24715.838364662588,corn,great_plains_SD,Heil,94.0,Poorly drained,4.5,6.5,22.5,22.4,55.1,19.3,1.3,0.2
+FIELD_0134,22721.44719555944,corn,great_plains_MO,Worthen,100.0,Well drained,3.5,6.5,18.5,11.7,69.8,16.2,1.3,0.23
+FIELD_0135,9596.974089360654,wheat,great_plains_KS,Armster,100.0,Moderately well drained,1.72,5.5,18.3,34.7,47.0,11.5,1.43,0.19
+FIELD_0136,4423.419336540451,corn,great_plains_ND,Lawther,77.0,Well drained,3.0,6.9,43.0,9.0,48.0,33.0,1.3,0.17
+FIELD_0137,26837.206896007556,wheat,great_plains_IA,Coland,90.0,Poorly drained,7.0,6.7,31.0,22.0,47.0,26.6,1.15,0.18
+FIELD_0138,2276.315420146278,corn,great_plains_MO,Freeburg,92.0,Somewhat poorly drained,2.1,5.3,25.0,2.5,72.5,20.9,1.44,0.21
+FIELD_0139,36902.21127676475,soybeans,great_plains_MO,Kennebec,95.0,Moderately well drained,3.0,6.6,25.0,5.0,70.0,21.2,1.3,0.23
+FIELD_0140,25298.82373568608,wheat,great_plains_ND,Bowbells,78.0,Moderately well drained,4.0,6.7,24.0,28.0,48.0,20.6,1.4,0.18
+FIELD_0141,16224.403935558048,soybeans,great_plains_NE,Shell,99.0,Well drained,3.0,6.5,19.0,11.3,69.7,20.0,1.25,0.23
+FIELD_0142,28568.45519329384,corn,great_plains_SD,Obert,95.0,Very poorly drained,3.0,7.9,31.0,6.7,62.3,26.5,1.28,0.22
+FIELD_0143,18159.121369635923,wheat,great_plains_SD,Blendon,90.0,Well drained,3.0,6.5,14.0,66.1,19.9,15.0,1.3,0.14
+FIELD_0144,1235.1276015459816,wheat,great_plains_MO,Grundy,100.0,Somewhat poorly drained,3.26,5.5,22.3,5.8,71.9,20.0,1.43,0.23
+FIELD_0145,13600.597031138084,wheat,great_plains_MO,Colo,100.0,Poorly drained,6.0,6.3,30.0,6.0,64.0,25.6,1.23,0.22
+FIELD_0146,6063.862081855056,corn,great_plains_KS,Ulysses,100.0,Well drained,2.0,7.2,19.0,12.0,69.0,15.5,1.2,0.21
+FIELD_0147,2881.1637757834674,wheat,great_plains_SD,Stetter,85.0,Well drained,2.5,6.8,50.0,21.0,29.0,37.6,1.23,0.13
+FIELD_0148,4200.884747249778,wheat,great_plains_KS,Muir,90.0,Well drained,3.0,6.1,23.0,12.0,65.0,19.6,1.3,0.22
+FIELD_0149,38379.49443561663,soybeans,great_plains_ND,Arnegard,76.0,Well drained,4.5,6.7,22.0,42.0,36.0,24.0,1.35,0.2
+FIELD_0150,17358.927565537633,wheat,great_plains_NE,Richfield,95.0,Well drained,2.0,7.2,21.0,41.6,37.4,17.5,1.33,0.16
+FIELD_0151,26349.521395184172,wheat,great_plains_IA,Muscatine,95.0,Somewhat poorly drained,5.0,5.6,30.0,3.0,67.0,25.5,1.32,0.23
+FIELD_0152,13905.69686102404,wheat,great_plains_SD,Duda,100.0,Somewhat excessively drained,1.25,6.7,6.5,86.8,6.7,6.0,1.2,0.11
+FIELD_0153,3831.9544757689655,soybeans,great_plains_NE,Loretto,100.0,Well drained,2.5,5.8,13.0,67.4,19.6,14.0,1.5,0.16
+FIELD_0154,36529.56360155947,wheat,great_plains_IA,Lamont,95.0,Well drained,1.0,5.9,9.0,60.0,31.0,8.1,1.5,0.15
+FIELD_0155,22740.799529873595,wheat,great_plains_SD,Brookings,90.0,Moderately well drained,5.0,6.4,29.0,7.0,64.0,24.7,1.25,0.22
+FIELD_0156,9922.80823802444,soybeans,great_plains_KS,Wamego,90.0,Well drained,4.0,6.2,32.0,10.0,58.0,26.8,1.25,0.23
+FIELD_0157,2307.4290320177324,corn,great_plains_SD,Agar,92.0,Well drained,3.0,6.4,22.0,9.4,68.6,18.9,1.2,0.21
+FIELD_0158,17398.34132778936,soybeans,great_plains_ND,Tansem,75.0,Well drained,3.0,7.0,21.0,32.0,47.0,18.1,1.35,0.22
+FIELD_0159,27751.32299171107,corn,great_plains_MO,Splitlimb,95.0,Somewhat poorly drained,2.0,5.5,15.0,14.0,71.0,9.5,1.4,0.24
+FIELD_0160,2768.4336045559417,wheat,great_plains_SD,Badus,90.0,Poorly drained,6.0,7.9,28.5,7.1,64.4,28.5,1.18,0.21
+FIELD_0161,36236.29851155527,corn,great_plains_KS,Sampsel,95.0,Poorly drained,3.5,6.5,31.0,10.0,59.0,31.1,1.4,0.23
+FIELD_0162,5350.470061588895,wheat,great_plains_NE,Valentine,90.0,Excessively drained,1.5,6.7,6.0,87.0,7.0,5.1,1.5,0.11
+FIELD_0163,35983.25994973419,corn,great_plains_NE,Hord,100.0,Well drained,3.0,6.5,22.0,8.0,70.0,15.0,1.35,0.22
+FIELD_0164,2106.472598832372,corn,great_plains_MO,Cedargap,98.0,Well drained,3.5,6.7,20.0,22.0,58.0,17.4,1.42,0.17
+FIELD_0165,32609.746864212953,wheat,great_plains_ND,Vallers,70.0,Poorly drained,4.0,7.9,26.0,30.0,44.0,17.7,1.35,0.22
+FIELD_0166,26803.2328877522,wheat,great_plains_ND,Dovray,85.0,Very poorly drained,8.0,7.0,50.0,5.0,45.0,39.1,1.25,0.14
+FIELD_0167,18042.396417568703,corn,great_plains_ND,Great Bend,85.0,Well drained,4.0,7.0,33.0,6.0,61.0,27.5,1.3,0.2
+FIELD_0168,10581.03964703237,corn,great_plains_KS,Eudora,95.0,Well drained,1.5,7.0,12.0,40.0,48.0,11.2,1.4,0.22
+FIELD_0169,8213.83202637325,wheat,great_plains_MO,Cowden,100.0,Poorly drained,2.5,6.5,22.0,26.0,52.0,18.0,1.4,0.24
+FIELD_0170,13569.455944197123,corn,great_plains_IA,Ransom,95.0,Somewhat poorly drained,5.0,7.0,32.5,6.2,61.3,27.4,1.25,0.2
+FIELD_0171,3172.1741834030845,wheat,great_plains_SD,Tetonka,90.0,Poorly drained,5.0,6.5,23.0,13.0,64.0,19.7,1.25,0.23
+FIELD_0172,26498.324055867724,soybeans,great_plains_IA,Bolan,100.0,Well drained,3.5,6.7,23.0,39.5,37.5,19.8,1.43,0.21
+FIELD_0173,1713.7520608673751,wheat,great_plains_IA,Yellowriver,95.0,Well drained,2.5,6.9,21.0,28.0,51.0,14.9,1.33,0.21
+FIELD_0174,39063.01942554176,wheat,great_plains_MO,Birds,97.0,Poorly drained,3.0,6.5,21.0,11.0,68.0,18.1,1.4,0.23
+FIELD_0175,36835.16401989845,corn,great_plains_MO,Excello,100.0,Poorly drained,4.3,6.7,19.1,30.8,50.1,22.3,1.21,0.23
+FIELD_0176,26312.345598720563,corn,great_plains_MO,Ladoga,100.0,Moderately well drained,3.0,5.9,19.2,5.2,75.6,13.9,1.33,0.23
+FIELD_0177,3025.063274526207,corn,great_plains_KS,Eram,90.0,Moderately well drained,2.0,6.1,34.0,13.0,53.0,18.3,1.31,0.15
+FIELD_0178,28316.57287207229,wheat,great_plains_NE,Bankard,100.0,Somewhat excessively drained,0.75,7.9,6.0,87.3,6.7,5.5,1.88,0.13
+FIELD_0179,8109.394664127873,wheat,great_plains_ND,Arveson,65.0,Poorly drained,6.5,7.9,14.0,66.1,19.9,22.0,1.33,0.2
+FIELD_0180,26440.99019564211,corn,great_plains_ND,Cherry,78.0,Well drained,1.75,7.2,23.0,9.5,67.5,20.0,1.3,0.22
+FIELD_0181,3792.020596070817,corn,great_plains_SD,Harlake,85.0,Well drained,1.5,7.9,42.5,7.7,49.8,27.5,1.3,0.12
+FIELD_0182,20645.61771081048,wheat,great_plains_NE,Coly,100.0,Well drained,1.5,7.9,21.0,11.3,67.7,16.5,1.4,0.22
+FIELD_0183,12432.497063315966,wheat,great_plains_NE,Nenzel,90.0,Moderately well drained,1.5,6.7,6.0,87.0,7.0,6.5,1.53,0.11
+FIELD_0184,736.0073030805231,corn,great_plains_NE,Marshall,100.0,Well drained,3.0,6.0,33.0,3.0,64.0,27.2,1.36,0.22
+FIELD_0185,8962.464602904969,soybeans,great_plains_ND,Shambo,78.0,Well drained,3.5,6.3,22.0,43.0,35.0,22.0,1.3,0.2
+FIELD_0186,21123.432527300844,wheat,great_plains_ND,Borup,85.0,Very poorly drained,8.0,7.9,21.0,11.0,68.0,16.4,1.3,0.22
+FIELD_0187,26197.8525035456,corn,great_plains_KS,Irwin,90.0,Moderately well drained,3.0,6.5,33.0,8.0,59.0,27.2,1.3,0.21
+FIELD_0188,12250.699858685342,wheat,great_plains_KS,Armster,100.0,Moderately well drained,1.72,5.5,18.3,34.7,47.0,11.5,1.43,0.19
+FIELD_0189,19821.241011752485,wheat,great_plains_MO,Kanima,95.0,Well drained,1.0,6.7,35.0,8.0,57.0,18.6,1.34,0.11
+FIELD_0191,6481.239878748005,corn,great_plains_ND,Regan,86.0,Poorly drained,4.0,8.0,25.0,7.0,68.0,20.6,1.3,0.19
+FIELD_0192,34612.6211694648,soybeans,great_plains_IA,Ossian,100.0,Poorly drained,6.0,7.0,24.5,9.2,66.3,33.0,1.28,0.23
+FIELD_0193,5609.6194197800505,corn,great_plains_ND,Shambo,78.0,Well drained,3.5,6.3,22.0,43.0,35.0,22.0,1.3,0.2
+FIELD_0194,26386.639678200696,wheat,great_plains_KS,Ulysses,100.0,Well drained,2.0,7.2,19.0,12.0,69.0,15.5,1.2,0.21
+FIELD_0195,7430.585773224768,soybeans,great_plains_SD,Badus,90.0,Poorly drained,6.0,7.9,28.5,7.1,64.4,28.5,1.18,0.21
+FIELD_0196,34819.031887963334,soybeans,great_plains_KS,Wymore,90.0,Moderately well drained,3.0,6.0,35.0,4.0,61.0,27.8,1.3,0.22
+FIELD_0197,27773.693119835323,soybeans,great_plains_KS,Harney,97.0,Well drained,2.0,6.7,24.0,9.0,67.0,19.8,1.35,0.23
+FIELD_0198,3065.0124747138925,soybeans,great_plains_ND,Fairdale,85.0,Moderately well drained,5.0,7.6,23.0,22.0,55.0,19.3,1.2,0.22
+FIELD_0199,32384.263692113534,soybeans,great_plains_ND,Amor,73.0,Well drained,3.0,6.5,22.0,41.0,37.0,19.0,1.4,0.19
+FIELD_0200,12901.867439535792,corn,great_plains_ND,Grano,82.0,Very poorly drained,8.0,7.9,48.0,10.0,42.0,35.7,1.2,0.16
