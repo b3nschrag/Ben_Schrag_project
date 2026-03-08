@@ -1,0 +1,51 @@
+field_id,mukey,muname,compname,comppct_r,drainagecl,hzdept_r,hzdepb_r,om_r,ph1to1h2o_r,awc_r,claytotal_r,sandtotal_r,silttotal_r,dbthirdbar_r,cec7_r
+FIELD_0001,410340,"Galva silty clay loam, 2 to 5 percent slopes",Galva,95,Well drained,0.0,15.0,4.0,5.7,0.22,32.0,4.0,64.0,1.28,25.2
+FIELD_0002,2668821,"Clime-Sogn complex, 3 to 20 percent slopes",Clime,60,Well drained,0.0,25.0,3.0,7.5,0.16,41.0,5.0,54.0,1.32,22.1
+FIELD_0003,1457096,Pits,Pits,100,Well drained,0.0,18.0,3.0,6.1,0.22,23.0,12.0,65.0,1.3,19.6
+FIELD_0004,422929,"Coloma sand, 2 to 6 percent slopes",Coloma,90,Excessively drained,0.0,15.0,0.75,5.9,0.07,5.0,93.6,1.4,1.5,4.2
+FIELD_0005,428991,"Sogn silt loam, rocky, 6 to 30 percent slopes",Sogn,95,Somewhat excessively drained,0.0,38.0,3.0,7.3,0.2,21.5,26.1,52.4,1.18,15.0
+FIELD_0006,1605204,Water,Water,100,Somewhat poorly drained,0.0,18.0,3.6,6.2,0.18,30.0,23.0,47.0,1.34,24.5
+FIELD_0007,1902644,"Ava silt loam, 2 to 5 percent slopes",Ava,90,Moderately well drained,0.0,15.0,2.0,6.3,0.22,15.0,7.0,78.0,1.45,8.2
+FIELD_0008,410340,"Galva silty clay loam, 2 to 5 percent slopes",Galva,95,Well drained,0.0,15.0,4.0,5.7,0.22,32.0,4.0,64.0,1.28,25.2
+FIELD_0009,869261,Water,Water,100,Moderately well drained,0.0,18.0,2.0,7.0,0.21,21.0,5.0,74.0,1.4,17.8
+FIELD_0010,2024905,Water,Water,100,Somewhat poorly drained,0.0,20.0,3.0,6.0,0.22,14.9,8.0,77.1,1.4,13.3
+FIELD_0011,1692095,Water,Water,100,Moderately well drained,0.0,16.0,3.0,5.7,0.22,24.0,7.0,69.0,1.37,20.0
+FIELD_0012,1691403,"Wymore silty clay loam, 1 to 3 percent slopes",Wymore,90,Moderately well drained,0.0,15.0,3.0,6.0,0.22,35.0,4.0,61.0,1.3,27.8
+FIELD_0013,2533293,"Winfield silt loam, 5 to 10 percent slopes, eroded",Winfield,100,Moderately well drained,0.0,15.0,2.5,5.6,0.2,14.3,3.0,82.7,1.38,12.7
+FIELD_0014,2533046,"Bevier silty clay loam, 3 to 8 percent slopes, moderately eroded",Bevier,95,Somewhat poorly drained,0.0,15.0,3.0,6.2,0.22,30.0,6.0,64.0,1.04,24.4
+FIELD_0015,1406223,Water,Water,100,Somewhat poorly drained,0.0,20.0,3.0,6.0,0.22,14.9,8.0,77.1,1.4,13.3
+FIELD_0016,451002,"Orwood silt loam, 2 to 5 percent slopes",Orwood,100,Well drained,0.0,20.0,3.0,6.5,0.21,21.0,26.3,52.7,1.38,18.1
+FIELD_0017,409343,"Zook silt loam, overwash, 0 to 2 percent slopes",Zook,100,Poorly drained,0.0,18.0,3.0,6.7,0.23,23.0,12.5,64.5,1.5,19.4
+FIELD_0018,2521252,"Marshall silty clay loam, 2 to 5 percent slopes",Marshall,100,Well drained,0.0,18.0,3.3,5.9,0.22,31.0,3.0,66.0,1.24,22.3
+FIELD_0019,2216760,"Mixed alluvial land, 0 to 6 percent slopes",Mixed alluvial land,95,Poorly drained,0.0,20.0,2.0,6.2,0.21,21.0,4.0,75.0,1.42,17.8
+FIELD_0020,427074,"Albaton silty clay, rarely flooded",Albaton,100,Poorly drained,0.0,18.0,2.5,7.9,0.12,50.0,5.3,44.7,1.38,38.5
+FIELD_0021,2896350,"Sharpsburg silty clay loam, 2 to 5 percent slopes",Sharpsburg,90,Moderately well drained,0.0,20.0,3.8,6.2,0.22,33.0,2.0,65.0,1.31,25.5
+FIELD_0022,407547,"Chelsea loamy sand, 9 to 14 percent slopes",Chelsea,100,Excessively drained,0.0,15.0,1.0,6.5,0.13,11.5,84.3,4.2,1.53,7.5
+FIELD_0023,398325,Water,Water,100,Well drained,0.0,18.0,2.5,7.0,0.23,14.0,14.2,71.8,1.45,12.0
+FIELD_0024,406449,Water,Water,100,Well drained,0.0,13.0,2.5,6.5,0.21,22.0,40.0,38.0,1.44,18.7
+FIELD_0025,408169,"Orwood silt loam, 9 to 14 percent slopes, moderately eroded",Orwood,100,Well drained,0.0,20.0,2.5,6.5,0.21,17.0,29.3,53.7,1.38,14.9
+FIELD_0026,2511842,"Moland loam, 1 to 5 percent slopes",Moland,95,Well drained,0.0,36.0,3.5,6.5,0.23,22.5,28.0,49.5,1.38,19.4
+FIELD_0027,424363,Water,Water,100,Moderately well drained,0.0,30.0,2.5,7.0,0.23,14.0,14.2,71.8,1.45,12.5
+FIELD_0028,3051948,Water,Water,100,Poorly drained,0.0,20.0,2.58,5.8,0.23,22.0,7.0,71.0,1.38,18.6
+FIELD_0029,1691519,"Arents, earthen dam",Arents,100,Well drained,0.0,15.0,3.5,6.5,0.17,26.0,4.0,70.0,1.33,22.1
+FIELD_0030,2498621,Water,Water,100,Subaqueous,0.0,13.0,1.5,6.5,0.16,31.0,35.0,34.0,1.53,25.0
+FIELD_0031,410605,"Nira silty clay loam, 5 to 9 percent slopes, moderately eroded",Nira,100,Moderately well drained,0.0,18.0,2.7,6.5,0.22,31.0,6.9,62.1,1.33,27.5
+FIELD_0032,1460746,Water,Water,100,Moderately well drained,0.0,25.0,3.25,6.4,0.23,22.0,6.0,72.0,1.39,18.7
+FIELD_0033,402798,"Marshall silty clay loam, 2 to 5 percent slopes",Marshall,100,Well drained,0.0,18.0,3.3,5.9,0.22,31.0,3.0,66.0,1.24,22.3
+FIELD_0034,1865933,"Pits, sand and gravel",Pits,100,Well drained,0.0,15.0,4.0,5.7,0.22,32.0,4.0,64.0,1.28,25.2
+FIELD_0035,1457061,"Muir silt loam, rarely flooded",Muir,90,Well drained,0.0,18.0,3.0,6.1,0.22,23.0,12.0,65.0,1.3,19.6
+FIELD_0036,1454792,"Eram silty clay loam, 3 to 7 percent slopes",Eram,90,Moderately well drained,0.0,28.0,2.0,6.1,0.15,34.0,13.0,53.0,1.31,18.3
+FIELD_0037,2531367,"Lamoni clay loam, 9 to 14 percent slopes, moderately eroded",Lamoni,90,Somewhat poorly drained,0.0,27.0,2.7,6.2,0.19,34.0,34.0,32.0,1.36,27.0
+FIELD_0038,1691655,"Blencoe silty clay, clayey substratum, rarely flooded",Blencoe,98,Somewhat poorly drained,0.0,56.0,3.5,6.7,0.13,47.5,5.5,47.0,1.45,20.0
+FIELD_0039,1480690,"Benfield silty clay loam, 3 to 7 percent slopes",Benfield,90,Well drained,0.0,20.0,4.0,7.0,0.21,32.0,6.0,62.0,1.29,26.8
+FIELD_0040,797970,"Pits, sand and gravel","Pits, sand and gravel",100,Poorly drained,0.0,23.0,7.0,6.7,0.18,31.0,22.0,47.0,1.15,26.6
+FIELD_0041,201063,Water,Water,100,Somewhat poorly drained,0.0,30.0,2.5,6.2,0.21,31.0,34.0,35.0,1.5,27.5
+FIELD_0042,2605653,"Muir silt loam, very rarely flooded",Muir,90,Well drained,0.0,18.0,3.0,6.1,0.22,23.0,12.0,65.0,1.3,19.6
+FIELD_0043,1692363,"Crete silt loam, thick solum, 0 to 1 percent slopes",Crete,90,Moderately well drained,0.0,16.0,3.0,5.7,0.22,24.0,7.0,69.0,1.35,20.1
+FIELD_0044,1480690,"Benfield silty clay loam, 3 to 7 percent slopes",Benfield,90,Well drained,0.0,20.0,4.0,7.0,0.21,32.0,6.0,62.0,1.29,26.8
+FIELD_0045,447067,"Mahaska silty clay loam, 0 to 2 percent slopes",Mahaska,95,Somewhat poorly drained,0.0,18.0,4.0,6.1,0.22,29.0,2.0,69.0,1.23,24.1
+FIELD_0046,201298,"Menfro silt loam, 18 to 25 percent slopes, eroded",Menfro,100,Well drained,0.0,15.0,1.5,6.2,0.19,22.0,4.0,74.0,1.4,21.5
+FIELD_0047,396113,"Alluvial land, frequently flooded",Alluvial land,90,Poorly drained,0.0,30.0,6.0,6.7,0.21,31.0,20.0,49.0,1.45,33.0
+FIELD_0048,410281,"Spillville loam, 2 to 5 percent slopes",Spillville,90,Moderately well drained,0.0,23.0,3.5,6.7,0.21,24.0,40.0,36.0,1.3,20.5
+FIELD_0049,410252,"Webster clay loam, 0 to 2 percent slopes",Webster,85,Poorly drained,0.0,25.0,7.0,6.5,0.18,33.0,25.0,42.0,1.05,28.1
+FIELD_0050,409517,"Monona silt loam, 2 to 5 percent slopes",Monona,95,Well drained,0.0,18.0,3.4,6.2,0.23,23.0,4.0,73.0,1.28,23.1
